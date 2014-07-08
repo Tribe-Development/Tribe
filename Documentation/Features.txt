@@ -1,0 +1,13 @@
+Features to Implement:
+
+
+Implemented:
+
+
+Bugs:
+
+
+Potential Issues:
+   -> Databases: we need to make a real decision about what kind of database
+      structure we want to use. We need: high availability, big page tables
+      Candidates: Apache Cassandra, Clustered MongoDB?, 
