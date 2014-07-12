@@ -1,0 +1,430 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		04C807CA197068180019ABDD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C807C9197068180019ABDD /* AppDelegate.swift */; };
+		04C807CD197068180019ABDD /* Tribe_App.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 04C807CB197068180019ABDD /* Tribe_App.xcdatamodeld */; };
+		04C807CF197068180019ABDD /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04C807CE197068180019ABDD /* Images.xcassets */; };
+		04C807DB197068180019ABDD /* Tribe_AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C807DA197068180019ABDD /* Tribe_AppTests.swift */; };
+		04C807E5197068530019ABDD /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04C807E4197068530019ABDD /* Storyboard.storyboard */; };
+		04C807E71970697E0019ABDD /* vcMain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C807E61970697E0019ABDD /* vcMain.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		04C807D5197068180019ABDD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 04C807BC197068180019ABDD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 04C807C3197068180019ABDD;
+			remoteInfo = "Tribe-App";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		04C807C4197068180019ABDD /* Tribe-App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tribe-App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		04C807C8197068180019ABDD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		04C807C9197068180019ABDD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		04C807CC197068180019ABDD /* Tribe_App.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Tribe_App.xcdatamodel; sourceTree = "<group>"; };
+		04C807CE197068180019ABDD /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		04C807D4197068180019ABDD /* Tribe-AppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tribe-AppTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		04C807D9197068180019ABDD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		04C807DA197068180019ABDD /* Tribe_AppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tribe_AppTests.swift; sourceTree = "<group>"; };
+		04C807E4197068530019ABDD /* Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Storyboard.storyboard; sourceTree = "<group>"; };
+		04C807E61970697E0019ABDD /* vcMain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = vcMain.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		04C807C1197068180019ABDD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		04C807D1197068180019ABDD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		04C807BB197068180019ABDD = {
+			isa = PBXGroup;
+			children = (
+				04C807C6197068180019ABDD /* Tribe-App */,
+				04C807D7197068180019ABDD /* Tribe-AppTests */,
+				04C807C5197068180019ABDD /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		04C807C5197068180019ABDD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				04C807C4197068180019ABDD /* Tribe-App.app */,
+				04C807D4197068180019ABDD /* Tribe-AppTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		04C807C6197068180019ABDD /* Tribe-App */ = {
+			isa = PBXGroup;
+			children = (
+				04C807C9197068180019ABDD /* AppDelegate.swift */,
+				04C807CE197068180019ABDD /* Images.xcassets */,
+				04C807CB197068180019ABDD /* Tribe_App.xcdatamodeld */,
+				04C807C7197068180019ABDD /* Supporting Files */,
+				04C807E4197068530019ABDD /* Storyboard.storyboard */,
+				04C807E61970697E0019ABDD /* vcMain.swift */,
+			);
+			path = "Tribe-App";
+			sourceTree = "<group>";
+		};
+		04C807C7197068180019ABDD /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				04C807C8197068180019ABDD /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		04C807D7197068180019ABDD /* Tribe-AppTests */ = {
+			isa = PBXGroup;
+			children = (
+				04C807DA197068180019ABDD /* Tribe_AppTests.swift */,
+				04C807D8197068180019ABDD /* Supporting Files */,
+			);
+			path = "Tribe-AppTests";
+			sourceTree = "<group>";
+		};
+		04C807D8197068180019ABDD /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				04C807D9197068180019ABDD /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		04C807C3197068180019ABDD /* Tribe-App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 04C807DE197068180019ABDD /* Build configuration list for PBXNativeTarget "Tribe-App" */;
+			buildPhases = (
+				04C807C0197068180019ABDD /* Sources */,
+				04C807C1197068180019ABDD /* Frameworks */,
+				04C807C2197068180019ABDD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Tribe-App";
+			productName = "Tribe-App";
+			productReference = 04C807C4197068180019ABDD /* Tribe-App.app */;
+			productType = "com.apple.product-type.application";
+		};
+		04C807D3197068180019ABDD /* Tribe-AppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 04C807E1197068180019ABDD /* Build configuration list for PBXNativeTarget "Tribe-AppTests" */;
+			buildPhases = (
+				04C807D0197068180019ABDD /* Sources */,
+				04C807D1197068180019ABDD /* Frameworks */,
+				04C807D2197068180019ABDD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				04C807D6197068180019ABDD /* PBXTargetDependency */,
+			);
+			name = "Tribe-AppTests";
+			productName = "Tribe-AppTests";
+			productReference = 04C807D4197068180019ABDD /* Tribe-AppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		04C807BC197068180019ABDD /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0600;
+				ORGANIZATIONNAME = TheTribe;
+				TargetAttributes = {
+					04C807C3197068180019ABDD = {
+						CreatedOnToolsVersion = 6.0;
+						DevelopmentTeam = TYQGN22GUE;
+					};
+					04C807D3197068180019ABDD = {
+						CreatedOnToolsVersion = 6.0;
+						TestTargetID = 04C807C3197068180019ABDD;
+					};
+				};
+			};
+			buildConfigurationList = 04C807BF197068180019ABDD /* Build configuration list for PBXProject "Tribe-App" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 04C807BB197068180019ABDD;
+			productRefGroup = 04C807C5197068180019ABDD /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				04C807C3197068180019ABDD /* Tribe-App */,
+				04C807D3197068180019ABDD /* Tribe-AppTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		04C807C2197068180019ABDD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04C807CF197068180019ABDD /* Images.xcassets in Resources */,
+				04C807E5197068530019ABDD /* Storyboard.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		04C807D2197068180019ABDD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		04C807C0197068180019ABDD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04C807CD197068180019ABDD /* Tribe_App.xcdatamodeld in Sources */,
+				04C807E71970697E0019ABDD /* vcMain.swift in Sources */,
+				04C807CA197068180019ABDD /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		04C807D0197068180019ABDD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04C807DB197068180019ABDD /* Tribe_AppTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		04C807D6197068180019ABDD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 04C807C3197068180019ABDD /* Tribe-App */;
+			targetProxy = 04C807D5197068180019ABDD /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		04C807DC197068180019ABDD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				METAL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		04C807DD197068180019ABDD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				METAL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		04C807DF197068180019ABDD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = "Tribe-App/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+			};
+			name = Debug;
+		};
+		04C807E0197068180019ABDD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = "Tribe-App/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+			};
+			name = Release;
+		};
+		04C807E2197068180019ABDD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Tribe-App.app/Tribe-App";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Tribe-AppTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				METAL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+			};
+			name = Debug;
+		};
+		04C807E3197068180019ABDD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Tribe-App.app/Tribe-App";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Tribe-AppTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				METAL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		04C807BF197068180019ABDD /* Build configuration list for PBXProject "Tribe-App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				04C807DC197068180019ABDD /* Debug */,
+				04C807DD197068180019ABDD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		04C807DE197068180019ABDD /* Build configuration list for PBXNativeTarget "Tribe-App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				04C807DF197068180019ABDD /* Debug */,
+				04C807E0197068180019ABDD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		04C807E1197068180019ABDD /* Build configuration list for PBXNativeTarget "Tribe-AppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				04C807E2197068180019ABDD /* Debug */,
+				04C807E3197068180019ABDD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		04C807CB197068180019ABDD /* Tribe_App.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				04C807CC197068180019ABDD /* Tribe_App.xcdatamodel */,
+			);
+			currentVersion = 04C807CC197068180019ABDD /* Tribe_App.xcdatamodel */;
+			path = Tribe_App.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 04C807BC197068180019ABDD /* Project object */;
+}

@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "0458657E196B884900F9B802"
-               BuildableName = "Tribe.app"
-               BlueprintName = "Tribe"
-               ReferencedContainer = "container:Tribe.xcodeproj">
+               BlueprintIdentifier = "04C807C3197068180019ABDD"
+               BuildableName = "Tribe-App.app"
+               BlueprintName = "Tribe-App"
+               ReferencedContainer = "container:Tribe-App.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -32,20 +32,20 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "04586592196B884A00F9B802"
-               BuildableName = "TribeTests.xctest"
-               BlueprintName = "TribeTests"
-               ReferencedContainer = "container:Tribe.xcodeproj">
+               BlueprintIdentifier = "04C807D3197068180019ABDD"
+               BuildableName = "Tribe-AppTests.xctest"
+               BlueprintName = "Tribe-AppTests"
+               ReferencedContainer = "container:Tribe-App.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "0458657E196B884900F9B802"
-            BuildableName = "Tribe.app"
-            BlueprintName = "Tribe"
-            ReferencedContainer = "container:Tribe.xcodeproj">
+            BlueprintIdentifier = "04C807C3197068180019ABDD"
+            BuildableName = "Tribe-App.app"
+            BlueprintName = "Tribe-App"
+            ReferencedContainer = "container:Tribe-App.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -61,10 +61,10 @@
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "0458657E196B884900F9B802"
-            BuildableName = "Tribe.app"
-            BlueprintName = "Tribe"
-            ReferencedContainer = "container:Tribe.xcodeproj">
+            BlueprintIdentifier = "04C807C3197068180019ABDD"
+            BuildableName = "Tribe-App.app"
+            BlueprintName = "Tribe-App"
+            ReferencedContainer = "container:Tribe-App.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -79,10 +79,10 @@
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "0458657E196B884900F9B802"
-            BuildableName = "Tribe.app"
-            BlueprintName = "Tribe"
-            ReferencedContainer = "container:Tribe.xcodeproj">
+            BlueprintIdentifier = "04C807C3197068180019ABDD"
+            BuildableName = "Tribe-App.app"
+            BlueprintName = "Tribe-App"
+            ReferencedContainer = "container:Tribe-App.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

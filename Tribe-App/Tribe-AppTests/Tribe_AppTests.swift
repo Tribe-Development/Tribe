@@ -1,14 +1,14 @@
 //
-//  TribeTests.swift
-//  TribeTests
+//  Tribe_AppTests.swift
+//  Tribe-AppTests
 //
-//  Created by Charlie Martell on 7/7/14.
-//  Copyright (c) 2014 CCMApps. All rights reserved.
+//  Created by Charlie Martell on 7/11/14.
+//  Copyright (c) 2014 TheTribe. All rights reserved.
 //
 
 import XCTest
 
-class TribeTests: XCTestCase {
+class Tribe_AppTests: XCTestCase {
     
     override func setUp() {
         super.setUp()

@@ -4,7 +4,7 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>Tribe.xcscheme</key>
+		<key>Tribe-App.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>0</integer>
@@ -12,12 +12,12 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>0458657E196B884900F9B802</key>
+		<key>04C807C3197068180019ABDD</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>04586592196B884A00F9B802</key>
+		<key>04C807D3197068180019ABDD</key>
 		<dict>
 			<key>primary</key>
 			<true/>
