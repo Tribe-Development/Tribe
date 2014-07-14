@@ -22,63 +22,6 @@
             </objects>
             <point key="canvasLocation" x="368" y="496"/>
         </scene>
-        <!--Vc Register-->
-        <scene sceneID="eVr-XR-3mh">
-            <objects>
-                <viewController storyboardIdentifier="viewRegister" useStoryboardIdentifierAsRestorationIdentifier="YES" id="jZk-bW-zO8" customClass="vcRegister" customModule="Tribe_App" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="Ia3-RL-feM"/>
-                        <viewControllerLayoutGuide type="bottom" id="c0t-po-rVW"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="0aZ-6A-wXc" propertyAccessControl="all">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Complete your registration!" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="abh-nf-8lR">
-                                <rect key="frame" x="56" y="110" width="208.5" height="20.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="First Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ozg-3D-g0G">
-                                <rect key="frame" x="62" y="214" width="197" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                                <connections>
-                                    <action selector="firstField:" destination="jZk-bW-zO8" eventType="editingDidEnd" id="oH3-GY-5kO"/>
-                                </connections>
-                            </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Last Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Vbl-6u-ahQ">
-                                <rect key="frame" x="62" y="259" width="197" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                                <connections>
-                                    <action selector="lastField:" destination="jZk-bW-zO8" eventType="editingDidEnd" id="zh8-t0-8WQ"/>
-                                </connections>
-                            </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="npw-46-LOw">
-                                <rect key="frame" x="116" y="297" width="89" height="30"/>
-                                <state key="normal" title="Register">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="registerButton:" destination="jZk-bW-zO8" eventType="touchUpInside" id="RHU-sS-ceI"/>
-                                    <action selector="registerButton:" destination="602-Fu-vCB" eventType="touchUpInside" id="lcc-eg-Ggr"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="M5L-Zz-v5l"/>
-                    <connections>
-                        <outlet property="firstField" destination="ozg-3D-g0G" id="aAt-gY-WAm"/>
-                        <outlet property="lastField" destination="Vbl-6u-ahQ" id="JFu-Df-ZxB"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="MgH-ns-syN" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="749" y="496"/>
-        </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>

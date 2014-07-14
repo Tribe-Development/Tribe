@@ -12,8 +12,23 @@ import CoreData
 
 class vcMain: UIViewController {
     override func viewDidAppear(animated: Bool) {
+        var imageView = UIImageView(frame: CGRectMake(0, 0, 320, 450));
+        var image = UIImage(named: "tribe.jpg");
+        imageView.image = image;
+        self.view.addSubview(imageView);
+        
+        let button : UIButton = UIButton.buttonWithType(UIButtonType.Custom) as UIButton
+        button.frame = CGRectMake(0, 450, 320, 44)
+        button.backgroundColor = UIColor.lightGrayColor()
+        button.addTarget(self, action: "signButtonPressed:", forControlEvents: UIControlEvents.TouchUpInside)
+        button.setTitle("Sign Up / Login!", forState: UIControlState.Normal)
+        self.view.addSubview(button)
+    }
+    
+    func signButtonPressed(sender : UIButton!){
         login()
     }
+    
     func login() {
         var loginAlert:UIAlertController = UIAlertController(title: "Sign Up / Login", message: "Login to Join Your Tribe!", preferredStyle: UIAlertControllerStyle.Alert)
         
@@ -58,7 +73,6 @@ class vcMain: UIViewController {
         loginAlert.addTextFieldWithConfigurationHandler({
             textfield in
             textfield.placeholder = "Last Name"
-            textfield.secureTextEntry = true
             })
         
         loginAlert.addAction(UIAlertAction(title: "Sign Up", style: UIAlertActionStyle.Default, handler: {
