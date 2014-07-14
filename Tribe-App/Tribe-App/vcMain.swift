@@ -115,37 +115,70 @@ class vcMain: UIViewController {
         task.resume()
     }
     
-    func registrationCheck(responseCode: Int)-> Int
+    func registrationCheck(responseCode: Int)-> Void
     {
-        //TODO: Implement this shit
         if(responseCode == 200)
         {
-            return 1
+            //move to next screen
+            println("log in successful")
         }
-        else if(responseCode == 100)
+        else if(responseCode == 400)
         {
-            return 1
+            badRequest()
         }
-        else
+        else if(responseCode == 403)
         {
-            return 1
+            forbidden("registration")
         }
     }
     
-    func loginCheck(responseCode: Int)-> Int
+    func loginCheck(responseCode: Int)-> Void
     {
-        //TODO: Implement this shit
         if(responseCode == 200)
         {
-            return 1
+            //move to next screen
+            println("log in successful")
         }
-        else if(responseCode == 100)
+        else if(responseCode == 400)
         {
-            return 1
+            badRequest()
         }
         else
         {
-            return 1
+            forbidden("login")
+        }
+    }
+    
+    func badRequest()
+    {
+        var loginAlert:UIAlertController = UIAlertController(title: "Error Bad Request", message: "Please check your parameters and try again!", preferredStyle: UIAlertControllerStyle.Alert)
+        loginAlert.addAction(UIAlertAction(title: "Try Again", style: UIAlertActionStyle.Default, handler: {
+            alertAction in
+            self.login()
+            }))
+
+        self.presentViewController(loginAlert, animated: true, completion: nil)
+    }
+    
+    func forbidden(type: String)
+    {
+        if(type == "registration")
+        {
+            var loginAlert:UIAlertController = UIAlertController(title: "User Already Exists", message: "Incorrect User/Pass please check and try again!", preferredStyle: UIAlertControllerStyle.Alert)
+            loginAlert.addAction(UIAlertAction(title: "Try Again", style: UIAlertActionStyle.Default, handler: {
+                alertAction in
+                self.login()
+                }))
+            self.presentViewController(loginAlert, animated: true, completion: nil)
+        }
+        else if(type == "login")
+        {
+            var loginAlert:UIAlertController = UIAlertController(title: "Incorrect Credentials", message: "Incorrect User/Pass please check and try again!", preferredStyle: UIAlertControllerStyle.Alert)
+            loginAlert.addAction(UIAlertAction(title: "Try Again", style: UIAlertActionStyle.Default, handler: {
+                alertAction in
+                self.login()
+                }))
+            self.presentViewController(loginAlert, animated: true, completion: nil)
         }
     }
     
