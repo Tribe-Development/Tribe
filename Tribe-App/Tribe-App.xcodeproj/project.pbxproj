@@ -7,11 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		044F961919720B4500FA8D2B /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 044F961819720B4500FA8D2B /* Storyboard.storyboard */; };
+		044F961B1973846800FA8D2B /* tribe.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 044F961A1973846800FA8D2B /* tribe.jpg */; };
+		04878889197202C300FA06F5 /* vcRegister.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04878888197202C300FA06F5 /* vcRegister.swift */; };
 		04C807CA197068180019ABDD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C807C9197068180019ABDD /* AppDelegate.swift */; };
 		04C807CD197068180019ABDD /* Tribe_App.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 04C807CB197068180019ABDD /* Tribe_App.xcdatamodeld */; };
 		04C807CF197068180019ABDD /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04C807CE197068180019ABDD /* Images.xcassets */; };
 		04C807DB197068180019ABDD /* Tribe_AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C807DA197068180019ABDD /* Tribe_AppTests.swift */; };
-		04C807E5197068530019ABDD /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04C807E4197068530019ABDD /* Storyboard.storyboard */; };
 		04C807E71970697E0019ABDD /* vcMain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C807E61970697E0019ABDD /* vcMain.swift */; };
 /* End PBXBuildFile section */
 
@@ -26,6 +28,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		044F961819720B4500FA8D2B /* Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Storyboard.storyboard; sourceTree = "<group>"; };
+		044F961A1973846800FA8D2B /* tribe.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = tribe.jpg; path = ../../../../../Downloads/tribe.jpg; sourceTree = "<group>"; };
+		04878888197202C300FA06F5 /* vcRegister.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = vcRegister.swift; sourceTree = "<group>"; };
 		04C807C4197068180019ABDD /* Tribe-App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tribe-App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		04C807C8197068180019ABDD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		04C807C9197068180019ABDD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -34,7 +39,6 @@
 		04C807D4197068180019ABDD /* Tribe-AppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tribe-AppTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		04C807D9197068180019ABDD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		04C807DA197068180019ABDD /* Tribe_AppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tribe_AppTests.swift; sourceTree = "<group>"; };
-		04C807E4197068530019ABDD /* Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Storyboard.storyboard; sourceTree = "<group>"; };
 		04C807E61970697E0019ABDD /* vcMain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = vcMain.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -81,8 +85,10 @@
 				04C807CE197068180019ABDD /* Images.xcassets */,
 				04C807CB197068180019ABDD /* Tribe_App.xcdatamodeld */,
 				04C807C7197068180019ABDD /* Supporting Files */,
-				04C807E4197068530019ABDD /* Storyboard.storyboard */,
+				044F961819720B4500FA8D2B /* Storyboard.storyboard */,
 				04C807E61970697E0019ABDD /* vcMain.swift */,
+				044F961A1973846800FA8D2B /* tribe.jpg */,
+				04878888197202C300FA06F5 /* vcRegister.swift */,
 			);
 			path = "Tribe-App";
 			sourceTree = "<group>";
@@ -193,7 +199,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				04C807CF197068180019ABDD /* Images.xcassets in Resources */,
-				04C807E5197068530019ABDD /* Storyboard.storyboard in Resources */,
+				044F961919720B4500FA8D2B /* Storyboard.storyboard in Resources */,
+				044F961B1973846800FA8D2B /* tribe.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -212,6 +219,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				04C807CD197068180019ABDD /* Tribe_App.xcdatamodeld in Sources */,
+				04878889197202C300FA06F5 /* vcRegister.swift in Sources */,
 				04C807E71970697E0019ABDD /* vcMain.swift in Sources */,
 				04C807CA197068180019ABDD /* AppDelegate.swift in Sources */,
 			);

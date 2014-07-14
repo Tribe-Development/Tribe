@@ -7,7 +7,7 @@
         <!--Vc Main-->
         <scene sceneID="OHQ-BF-GsA">
             <objects>
-                <viewController id="602-Fu-vCB" customClass="vcMain" customModule="Tribe_App" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="viewMain" id="602-Fu-vCB" customClass="vcMain" customModule="Tribe_App" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="zbn-OX-D2v"/>
                         <viewControllerLayoutGuide type="bottom" id="0Tl-CU-JKf"/>
@@ -15,59 +15,69 @@
                     <view key="view" contentMode="scaleToFill" id="nR0-sX-nOJ">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="n93-bv-A5g" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="368" y="496"/>
+        </scene>
+        <!--Vc Register-->
+        <scene sceneID="eVr-XR-3mh">
+            <objects>
+                <viewController storyboardIdentifier="viewRegister" useStoryboardIdentifierAsRestorationIdentifier="YES" id="jZk-bW-zO8" customClass="vcRegister" customModule="Tribe_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Ia3-RL-feM"/>
+                        <viewControllerLayoutGuide type="bottom" id="c0t-po-rVW"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="0aZ-6A-wXc" propertyAccessControl="all">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="srU-Sb-ZLT">
-                                <rect key="frame" x="62" y="216" width="197" height="30"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Complete your registration!" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="abh-nf-8lR">
+                                <rect key="frame" x="56" y="110" width="208.5" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="First Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ozg-3D-g0G">
+                                <rect key="frame" x="62" y="214" width="197" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6wZ-Sp-pA1">
-                                <rect key="frame" x="62" y="262" width="197" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GLa-iJ-uFK">
-                                <rect key="frame" x="177" y="300" width="82" height="30"/>
-                                <state key="normal" title="Login">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
                                 <connections>
-                                    <action selector="loginButton:" destination="602-Fu-vCB" eventType="touchUpInside" id="NPb-Tk-MT7"/>
+                                    <action selector="firstField:" destination="jZk-bW-zO8" eventType="editingDidEnd" id="oH3-GY-5kO"/>
                                 </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qx3-py-LGa">
-                                <rect key="frame" x="62" y="300" width="89" height="30"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Last Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Vbl-6u-ahQ">
+                                <rect key="frame" x="62" y="259" width="197" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="lastField:" destination="jZk-bW-zO8" eventType="editingDidEnd" id="zh8-t0-8WQ"/>
+                                </connections>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="npw-46-LOw">
+                                <rect key="frame" x="116" y="297" width="89" height="30"/>
                                 <state key="normal" title="Register">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="registerButton:" destination="602-Fu-vCB" eventType="touchUpInside" id="s8S-OU-KWS"/>
+                                    <action selector="registerButton:" destination="jZk-bW-zO8" eventType="touchUpInside" id="RHU-sS-ceI"/>
+                                    <action selector="registerButton:" destination="602-Fu-vCB" eventType="touchUpInside" id="lcc-eg-Ggr"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ysV-24-A4b">
-                                <rect key="frame" x="20" y="157" width="280" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Welcome to Tribe!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="boG-I6-vad">
-                                <rect key="frame" x="20" y="110" width="280" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" id="M5L-Zz-v5l"/>
                     <connections>
-                        <outlet property="loginLabel" destination="ysV-24-A4b" id="xjx-aC-8FF"/>
-                        <outlet property="passwordField" destination="6wZ-Sp-pA1" id="ysa-k1-s5O"/>
-                        <outlet property="usernameField" destination="srU-Sb-ZLT" id="Of6-Xc-nlx"/>
+                        <outlet property="firstField" destination="ozg-3D-g0G" id="aAt-gY-WAm"/>
+                        <outlet property="lastField" destination="Vbl-6u-ahQ" id="JFu-Df-ZxB"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="n93-bv-A5g" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MgH-ns-syN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="418" y="360"/>
+            <point key="canvasLocation" x="749" y="496"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
