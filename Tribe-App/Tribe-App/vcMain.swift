@@ -230,7 +230,7 @@ class vcMain: UIViewController {
         }
         else
         {
-            forbidden("login")
+            forbiddenRequest("login")
         }
     }
     
@@ -258,7 +258,7 @@ class vcMain: UIViewController {
         }
         else if(responseCode == 403)
         {
-            forbidden("registration")
+            forbiddenRequest("registration")
         }
     }
     
@@ -273,7 +273,7 @@ class vcMain: UIViewController {
         self.presentViewController(loginAlert, animated: true, completion: nil)
     }
     
-    func forbidden(type: String)
+    func forbiddenRequest(type: String)
     {
         if(type == "registration")
         {
