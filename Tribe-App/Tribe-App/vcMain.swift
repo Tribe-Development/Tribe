@@ -12,9 +12,34 @@ import CoreData
 //NOTE: I currently have all of the Core Data stuff commented out because its buggy atm
 
 class vcMain: UIViewController {
+    let userDefaults = NSUserDefaults.standardUserDefaults()
     
     override func viewDidAppear(animated: Bool) {
-        setupHomeView()
+        var userUsername: AnyObject? = userDefaults.objectForKey("username")
+        if(userUsername != nil) {
+            setupHomeView()
+        }
+        else
+        {
+            println("User: \(userUsername) already Setup")
+            //change this to go to other view
+            setupHomeView()
+        }
+    }
+    
+    func clearUserDefaults() {
+        userDefaults.removeObjectForKey("username")
+        userDefaults.removeObjectForKey("password")
+        userDefaults.removeObjectForKey("serial")
+        
+    }
+    
+    func getUserDefaults() -> NSDictionary {
+        var userUsername: AnyObject? = userDefaults.objectForKey("username")
+        var userPassword: AnyObject? = userDefaults.objectForKey("password")
+        var userSerial: AnyObject? = userDefaults.objectForKey("serial")
+        var userDict: NSDictionary = ["username": userUsername,"password": userPassword, "serial": userSerial]
+        return userDict
     }
     
     func setupHomeView()
@@ -152,7 +177,7 @@ class vcMain: UIViewController {
                 }
                 println(serial)
             }
-            self.loginCheck(responseCode, tempUsername: tempUsername, tempPassword: tempPassword, serial: serial as String)
+            self.loginCheck(responseCode, tempUsername: tempUsername, tempPassword: tempPassword, tempSerial: serial as String)
             })
         task.resume()
     }
@@ -206,7 +231,7 @@ class vcMain: UIViewController {
 //        println("these are the results")
 //    }
     
-    func loginCheck(responseCode: Int, tempUsername: String, tempPassword: String, serial: String)-> Void
+    func loginCheck(responseCode: Int, tempUsername: String, tempPassword: String, tempSerial: String)-> Void
     {
         if(responseCode == 200)
         {
@@ -221,6 +246,11 @@ class vcMain: UIViewController {
 //            
 //            //implement error handler in place of nil
 //            context.save(nil)
+            userDefaults.setObject(tempUsername, forKey:"username")
+            userDefaults.setObject(tempPassword, forKey:"password")
+            userDefaults.setObject(tempSerial, forKey:"serial")
+            userDefaults.synchronize()
+            println("stored in user defaults^^")
             var loginAlert:UIAlertController = UIAlertController(title: "Login Success!", message: "Setup moving to new view", preferredStyle: UIAlertControllerStyle.Alert)
             self.presentViewController(loginAlert, animated: true, completion: nil)
         }
