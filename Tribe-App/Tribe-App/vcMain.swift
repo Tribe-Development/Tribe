@@ -31,7 +31,6 @@ class vcMain: UIViewController {
         userDefaults.removeObjectForKey("username")
         userDefaults.removeObjectForKey("password")
         userDefaults.removeObjectForKey("serial")
-        
     }
     
     func getUserDefaults() -> NSDictionary {
@@ -209,48 +208,20 @@ class vcMain: UIViewController {
                     serial = jsonResponse.valueForKey("token")
                 }
             }
-            self.registrationCheck(responseCode, tempUsername: tempUsername, tempPassword: tempPassword, serial: serial as String)
+            self.registrationCheck(responseCode, tempUsername: tempUsername, tempPassword: tempPassword, tempSerial: serial as String)
             })
         task.resume()
     }
-//    
-//    func clearCoreData()
-//    {
-//        var appDel:AppDelegate = (UIApplication.sharedApplication().delegate as AppDelegate)
-//        var context:NSManagedObjectContext = appDel.managedObjectContext
-//        
-//        var request = NSFetchRequest(entityName: "Users")
-//        var results: NSArray = context.executeFetchRequest(request, error: nil)
-//        println(results)
-//        println("these are the results before")
-//        for index in 0..results.count
-//        {
-//            context.deleteObject(results[index] as NSManagedObject)
-//        }
-//        println(results)
-//        println("these are the results")
-//    }
+
     
     func loginCheck(responseCode: Int, tempUsername: String, tempPassword: String, tempSerial: String)-> Void
     {
         if(responseCode == 200)
         {
-//            clearCoreData()
-//            var appDel: AppDelegate = (UIApplication.sharedApplication().delegate as AppDelegate)
-//            var context: NSManagedObjectContext = appDel.managedObjectContext
-//            
-//            var newUser = NSEntityDescription.insertNewObjectForEntityForName("Users", inManagedObjectContext: context) as NSManagedObject
-//            newUser.setValue(tempUsername, forKey: "username")
-//            newUser.setValue(tempPassword, forKey: "password")
-//            //newUser.setValue(serial, forKey: "serial")
-//            
-//            //implement error handler in place of nil
-//            context.save(nil)
             userDefaults.setObject(tempUsername, forKey:"username")
             userDefaults.setObject(tempPassword, forKey:"password")
             userDefaults.setObject(tempSerial, forKey:"serial")
             userDefaults.synchronize()
-            println("stored in user defaults^^")
             var loginAlert:UIAlertController = UIAlertController(title: "Login Success!", message: "Setup moving to new view", preferredStyle: UIAlertControllerStyle.Alert)
             self.presentViewController(loginAlert, animated: true, completion: nil)
         }
@@ -264,21 +235,14 @@ class vcMain: UIViewController {
         }
     }
     
-    func registrationCheck(responseCode: Int, tempUsername: String, tempPassword: String, serial: String)-> Void
+    func registrationCheck(responseCode: Int, tempUsername: String, tempPassword: String, tempSerial: String)-> Void
     {
         if(responseCode == 200)
         {
-//            clearCoreData()
-//            var appDel: AppDelegate = (UIApplication.sharedApplication().delegate as AppDelegate)
-//            var context: NSManagedObjectContext = appDel.managedObjectContext
-//            var newUser = NSEntityDescription.insertNewObjectForEntityForName("Users", inManagedObjectContext: context) as NSManagedObject
-//            
-//            newUser.setValue(tempUsername, forKey: "username")
-//            newUser.setValue(tempPassword, forKey: "password")
-//            newUser.setValue(serial, forKey: "serial")
-//            
-//            //implement error handler in place of nil
-//            context.save(nil)
+            userDefaults.setObject(tempUsername, forKey:"username")
+            userDefaults.setObject(tempPassword, forKey:"password")
+            userDefaults.setObject(tempSerial, forKey:"serial")
+            userDefaults.synchronize()
             var loginAlert:UIAlertController = UIAlertController(title: "Registration Success!", message: "Setup moving to new view", preferredStyle: UIAlertControllerStyle.Alert)
             self.presentViewController(loginAlert, animated: true, completion: nil)
         }
