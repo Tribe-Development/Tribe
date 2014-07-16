@@ -9,28 +9,76 @@
 import UIKit
 import CoreData
 
+//NOTE: I currently have all of the Core Data stuff commented out because its buggy atm
 
 class vcMain: UIViewController {
+    
     override func viewDidAppear(animated: Bool) {
+        setupHomeView()
+    }
+    
+    func setupHomeView()
+    {
         var imageView = UIImageView(frame: CGRectMake(0, 0, 320, 450));
         var image = UIImage(named: "tribe.jpg");
         imageView.image = image;
         self.view.addSubview(imageView);
         
-        let button : UIButton = UIButton.buttonWithType(UIButtonType.Custom) as UIButton
-        button.frame = CGRectMake(0, 450, 320, 44)
-        button.backgroundColor = UIColor.lightGrayColor()
-        button.addTarget(self, action: "signButtonPressed:", forControlEvents: UIControlEvents.TouchUpInside)
-        button.setTitle("Sign Up / Login!", forState: UIControlState.Normal)
-        self.view.addSubview(button)
+        //Login Button
+        let loginButton : UIButton = UIButton.buttonWithType(UIButtonType.Custom) as UIButton
+        loginButton.frame = CGRectMake(0, 450, 320, 59)
+        loginButton.backgroundColor = UIColorFromRGB(0x1A9A91)
+        loginButton.addTarget(self, action: Selector("loginAlert"), forControlEvents: UIControlEvents.TouchUpInside)
+        loginButton.setTitle("Login", forState: UIControlState.Normal)
+        self.view.addSubview(loginButton)
+        
+        //Sign Up Button
+        let signUpButton : UIButton = UIButton.buttonWithType(UIButtonType.Custom) as UIButton
+        signUpButton.frame = CGRectMake(0, 509, 320, 59)
+        signUpButton.backgroundColor = UIColorFromRGB(0xF37896)
+        signUpButton.addTarget(self, action: Selector("registerAlert"), forControlEvents: UIControlEvents.TouchUpInside)
+        signUpButton.setTitle("Sign Up", forState: UIControlState.Normal)
+        self.view.addSubview(signUpButton)
     }
     
-    func signButtonPressed(sender : UIButton!){
-        login()
+    //Lets you pass a hexadecimal value and make a UIColor object from it
+    func UIColorFromRGB(rgbValue: UInt) -> UIColor {
+        return UIColor(
+            red: CGFloat((rgbValue & 0xFF0000) >> 16) / 255.0,
+            green: CGFloat((rgbValue & 0x00FF00) >> 8) / 255.0,
+            blue: CGFloat(rgbValue & 0x0000FF) / 255.0,
+            alpha: CGFloat(1.0)
+        )
     }
     
-    func login() {
-        var loginAlert:UIAlertController = UIAlertController(title: "Sign Up / Login", message: "Login to Join Your Tribe!", preferredStyle: UIAlertControllerStyle.Alert)
+    //TODO: Rework these 3 methods to support scrolling up
+    func loginAlert() {
+        var loginAlert:UIAlertController = UIAlertController(title: "Login!", message: "Login to Join Your Tribe!", preferredStyle: UIAlertControllerStyle.Alert)
+        
+        loginAlert.addTextFieldWithConfigurationHandler({
+            textfield in
+            textfield.placeholder = "Username"
+            })
+        
+        loginAlert.addTextFieldWithConfigurationHandler({
+            textfield in
+            textfield.placeholder = "Password"
+            textfield.secureTextEntry = true
+            })
+        
+        loginAlert.addAction(UIAlertAction(title: "Login", style: UIAlertActionStyle.Default, handler: {
+            alertAction in
+            let textFields:NSArray = loginAlert.textFields as NSArray
+            let usernameTextfield:UITextField = textFields.objectAtIndex(0) as UITextField
+            let passwordTextfield:UITextField = textFields.objectAtIndex(1) as UITextField
+            self.loginHTTPPost(usernameTextfield.text, tempPassword: passwordTextfield.text)
+            }))
+        
+        self.presentViewController(loginAlert, animated: true, completion: nil)
+    }
+    
+    func registerAlert() {
+        var loginAlert:UIAlertController = UIAlertController(title: "Sign Up", message: "Sign Up to Join Your Tribe!", preferredStyle: UIAlertControllerStyle.Alert)
         
         loginAlert.addTextFieldWithConfigurationHandler({
             textfield in
@@ -48,21 +96,13 @@ class vcMain: UIViewController {
             let textFields:NSArray = loginAlert.textFields as NSArray
             let usernameTextfield:UITextField = textFields.objectAtIndex(0) as UITextField
             let passwordTextfield:UITextField = textFields.objectAtIndex(1) as UITextField
-            self.completeRegistration(true, username: usernameTextfield.text, password: passwordTextfield.text)
-            }))
-        
-        loginAlert.addAction(UIAlertAction(title: "Login", style: UIAlertActionStyle.Default, handler: {
-            alertAction in
-            let textFields:NSArray = loginAlert.textFields as NSArray
-            let usernameTextfield:UITextField = textFields.objectAtIndex(0) as UITextField
-            let passwordTextfield:UITextField = textFields.objectAtIndex(1) as UITextField
-            self.loginHTTPPost(usernameTextfield.text, tempPassword: passwordTextfield.text)
+            self.completeRegistrationAlert(true, username: usernameTextfield.text, password: passwordTextfield.text)
             }))
         
         self.presentViewController(loginAlert, animated: true, completion: nil)
     }
     
-    func completeRegistration(animated: Bool, username: String, password: String) {
+    func completeRegistrationAlert(animated: Bool, username: String, password: String) {
         var loginAlert:UIAlertController = UIAlertController(title: "Complete Registration", message: "Enter your name to join a Tribe!", preferredStyle: UIAlertControllerStyle.Alert)
         
         loginAlert.addTextFieldWithConfigurationHandler({
@@ -94,15 +134,25 @@ class vcMain: UIViewController {
         let dataToSend = (paramString as NSString).dataUsingEncoding(NSUTF8StringEncoding)
         var requestBodyData: NSData = dataToSend
         request.HTTPBody = requestBodyData
+        var serial: AnyObject = "Did not Initialize"
         var responseCode: Int = 666
+        //Closure executes after task.resume()
         var task = session.dataTaskWithRequest(request, completionHandler: {data, response, error -> Void in
             let httpResp: NSHTTPURLResponse = response as NSHTTPURLResponse
             println("Response: \(response)")
-            var strData = NSString(data: data, encoding: NSUTF8StringEncoding)
-            println("Body: \(strData)")
             var err: NSError?
-            responseCode = httpResp.statusCode
-            self.loginCheck(responseCode)
+            //Don't parse json if there is none
+            if(data.length > 0)
+            {
+                var jsonResponse = NSJSONSerialization.JSONObjectWithData(data, options: .MutableLeaves, error: &err) as NSDictionary
+                responseCode = httpResp.statusCode
+                if(responseCode == 200)
+                {
+                    serial = jsonResponse.valueForKey("token")
+                }
+                println(serial)
+            }
+            self.loginCheck(responseCode, tempUsername: tempUsername, tempPassword: tempPassword, serial: serial as String)
             })
         task.resume()
     }
@@ -116,42 +166,63 @@ class vcMain: UIViewController {
         let dataToSend = (paramString as NSString).dataUsingEncoding(NSUTF8StringEncoding)
         var requestBodyData: NSData = dataToSend
         request.HTTPBody = requestBodyData
+        var serial: AnyObject = "Did not Initialize"
         var responseCode: Int = 666
+        //Closure executes after task.resume()
         var task = session.dataTaskWithRequest(request, completionHandler: {data, response, error -> Void in
             let httpResp: NSHTTPURLResponse = response as NSHTTPURLResponse
             println("Response: \(response)")
-            var strData = NSString(data: data, encoding: NSUTF8StringEncoding)
-            println("Body: \(strData)")
             var err: NSError?
-            responseCode = httpResp.statusCode
-            self.registrationCheck(responseCode)
+            //Don't parse json if there is none
+            if(data.length > 0)
+            {
+                var jsonResponse = NSJSONSerialization.JSONObjectWithData(data, options: .MutableLeaves, error: &err) as NSDictionary
+                println(jsonResponse)
+                responseCode = httpResp.statusCode
+                if(responseCode == 200)
+                {
+                    serial = jsonResponse.valueForKey("token")
+                }
+            }
+            self.registrationCheck(responseCode, tempUsername: tempUsername, tempPassword: tempPassword, serial: serial as String)
             })
         task.resume()
     }
+//    
+//    func clearCoreData()
+//    {
+//        var appDel:AppDelegate = (UIApplication.sharedApplication().delegate as AppDelegate)
+//        var context:NSManagedObjectContext = appDel.managedObjectContext
+//        
+//        var request = NSFetchRequest(entityName: "Users")
+//        var results: NSArray = context.executeFetchRequest(request, error: nil)
+//        println(results)
+//        println("these are the results before")
+//        for index in 0..results.count
+//        {
+//            context.deleteObject(results[index] as NSManagedObject)
+//        }
+//        println(results)
+//        println("these are the results")
+//    }
     
-    func registrationCheck(responseCode: Int)-> Void
+    func loginCheck(responseCode: Int, tempUsername: String, tempPassword: String, serial: String)-> Void
     {
         if(responseCode == 200)
         {
-            //move to next screen
-            println("log in successful")
-        }
-        else if(responseCode == 400)
-        {
-            badRequest()
-        }
-        else if(responseCode == 403)
-        {
-            forbidden("registration")
-        }
-    }
-    
-    func loginCheck(responseCode: Int)-> Void
-    {
-        if(responseCode == 200)
-        {
-            //move to next screen
-            println("log in successful")
+//            clearCoreData()
+//            var appDel: AppDelegate = (UIApplication.sharedApplication().delegate as AppDelegate)
+//            var context: NSManagedObjectContext = appDel.managedObjectContext
+//            
+//            var newUser = NSEntityDescription.insertNewObjectForEntityForName("Users", inManagedObjectContext: context) as NSManagedObject
+//            newUser.setValue(tempUsername, forKey: "username")
+//            newUser.setValue(tempPassword, forKey: "password")
+//            //newUser.setValue(serial, forKey: "serial")
+//            
+//            //implement error handler in place of nil
+//            context.save(nil)
+            var loginAlert:UIAlertController = UIAlertController(title: "Login Success!", message: "Setup moving to new view", preferredStyle: UIAlertControllerStyle.Alert)
+            self.presentViewController(loginAlert, animated: true, completion: nil)
         }
         else if(responseCode == 400)
         {
@@ -163,12 +234,40 @@ class vcMain: UIViewController {
         }
     }
     
+    func registrationCheck(responseCode: Int, tempUsername: String, tempPassword: String, serial: String)-> Void
+    {
+        if(responseCode == 200)
+        {
+//            clearCoreData()
+//            var appDel: AppDelegate = (UIApplication.sharedApplication().delegate as AppDelegate)
+//            var context: NSManagedObjectContext = appDel.managedObjectContext
+//            var newUser = NSEntityDescription.insertNewObjectForEntityForName("Users", inManagedObjectContext: context) as NSManagedObject
+//            
+//            newUser.setValue(tempUsername, forKey: "username")
+//            newUser.setValue(tempPassword, forKey: "password")
+//            newUser.setValue(serial, forKey: "serial")
+//            
+//            //implement error handler in place of nil
+//            context.save(nil)
+            var loginAlert:UIAlertController = UIAlertController(title: "Registration Success!", message: "Setup moving to new view", preferredStyle: UIAlertControllerStyle.Alert)
+            self.presentViewController(loginAlert, animated: true, completion: nil)
+        }
+        else if(responseCode == 400)
+        {
+            badRequest()
+        }
+        else if(responseCode == 403)
+        {
+            forbidden("registration")
+        }
+    }
+    
     func badRequest()
     {
         var loginAlert:UIAlertController = UIAlertController(title: "Error Bad Request", message: "Please check your parameters and try again!", preferredStyle: UIAlertControllerStyle.Alert)
         loginAlert.addAction(UIAlertAction(title: "Try Again", style: UIAlertActionStyle.Default, handler: {
             alertAction in
-            self.login()
+            self.loginAlert()
             }))
 
         self.presentViewController(loginAlert, animated: true, completion: nil)
@@ -181,7 +280,7 @@ class vcMain: UIViewController {
             var loginAlert:UIAlertController = UIAlertController(title: "User Already Exists", message: "Incorrect User/Pass please check and try again!", preferredStyle: UIAlertControllerStyle.Alert)
             loginAlert.addAction(UIAlertAction(title: "Try Again", style: UIAlertActionStyle.Default, handler: {
                 alertAction in
-                self.login()
+                self.loginAlert()
                 }))
             self.presentViewController(loginAlert, animated: true, completion: nil)
         }
@@ -190,7 +289,7 @@ class vcMain: UIViewController {
             var loginAlert:UIAlertController = UIAlertController(title: "Incorrect Credentials", message: "Incorrect User/Pass please check and try again!", preferredStyle: UIAlertControllerStyle.Alert)
             loginAlert.addAction(UIAlertAction(title: "Try Again", style: UIAlertActionStyle.Default, handler: {
                 alertAction in
-                self.login()
+                self.loginAlert()
                 }))
             self.presentViewController(loginAlert, animated: true, completion: nil)
         }

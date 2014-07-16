@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		044F961919720B4500FA8D2B /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 044F961819720B4500FA8D2B /* Storyboard.storyboard */; };
 		044F961B1973846800FA8D2B /* tribe.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 044F961A1973846800FA8D2B /* tribe.jpg */; };
 		04C807CA197068180019ABDD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C807C9197068180019ABDD /* AppDelegate.swift */; };
 		04C807CD197068180019ABDD /* Tribe_App.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 04C807CB197068180019ABDD /* Tribe_App.xcdatamodeld */; };
@@ -27,7 +26,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		044F961819720B4500FA8D2B /* Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Storyboard.storyboard; sourceTree = "<group>"; };
 		044F961A1973846800FA8D2B /* tribe.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = tribe.jpg; path = ../../../../../Downloads/tribe.jpg; sourceTree = "<group>"; };
 		04C807C4197068180019ABDD /* Tribe-App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tribe-App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		04C807C8197068180019ABDD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -83,7 +81,6 @@
 				04C807CE197068180019ABDD /* Images.xcassets */,
 				04C807CB197068180019ABDD /* Tribe_App.xcdatamodeld */,
 				04C807C7197068180019ABDD /* Supporting Files */,
-				044F961819720B4500FA8D2B /* Storyboard.storyboard */,
 				04C807E61970697E0019ABDD /* vcMain.swift */,
 				044F961A1973846800FA8D2B /* tribe.jpg */,
 			);
@@ -196,7 +193,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				04C807CF197068180019ABDD /* Images.xcassets in Resources */,
-				044F961919720B4500FA8D2B /* Storyboard.storyboard in Resources */,
 				044F961B1973846800FA8D2B /* tribe.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
