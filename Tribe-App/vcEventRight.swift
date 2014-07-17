@@ -8,7 +8,7 @@
 
 import UIKit
 
-class vcMessages: UIViewController {
+class vcEventRight: UIViewController {
     
     func setupNavigation(){
         
@@ -23,16 +23,16 @@ class vcMessages: UIViewController {
         //Event Button
         let eventButton : UIButton = UIButton.buttonWithType(UIButtonType.Custom) as UIButton
         eventButton.frame = CGRectMake(64, 509, 64, 59)
-        eventButton.backgroundColor = UIColorFromRGB(0x33CC99)
-        eventButton.addTarget(self, action: Selector("toEvent"), forControlEvents: UIControlEvents.TouchUpInside)
+        eventButton.backgroundColor = UIColorFromRGB(0x33CC4D)
+        eventButton.addTarget(self, action: Selector("doNothing"), forControlEvents: UIControlEvents.TouchUpInside)
         eventButton.setTitle("Event", forState: UIControlState.Normal)
         self.view.addSubview(eventButton)
         
         //Message Button
         let messageButton : UIButton = UIButton.buttonWithType(UIButtonType.Custom) as UIButton
         messageButton.frame = CGRectMake(128, 509, 64, 59)
-        messageButton.backgroundColor = UIColorFromRGB(0x33CC4D)
-        messageButton.addTarget(self, action: Selector("doNothing"), forControlEvents: UIControlEvents.TouchUpInside)
+        messageButton.backgroundColor = UIColorFromRGB(0x33CC99)
+        messageButton.addTarget(self, action: Selector("toMessage"), forControlEvents: UIControlEvents.TouchUpInside)
         messageButton.setTitle("Messge", forState: UIControlState.Normal)
         self.view.addSubview(messageButton)
         
@@ -53,6 +53,26 @@ class vcMessages: UIViewController {
         self.view.addSubview(settingsButton)
     }
     
+    func doNothing() {
+        //Does Nothing!
+    }
+    
+    func toChill(){
+        performSegueWithIdentifier("eventRightToChill", sender: self)
+    }
+    
+    func toSettings(){
+        performSegueWithIdentifier("eventRightToSettings", sender: self)
+    }
+    
+    func toMoney(){
+        performSegueWithIdentifier("eventRightToMoney", sender: self)
+    }
+    
+    func toMessage(){
+        performSegueWithIdentifier("eventRightToMessage", sender: self)
+    }
+    
     //Lets you pass a hexadecimal value and make a UIColor object from it
     func UIColorFromRGB(rgbValue: UInt) -> UIColor {
         return UIColor(
@@ -68,45 +88,18 @@ class vcMessages: UIViewController {
         self.presentViewController(loginAlert, animated: true, completion: nil)
     }
     
-    func doNothing() {
-        //Does Nothing!
-    }
-    
-    func toChill(){
-        performSegueWithIdentifier("messageToChill", sender: self)
-    }
-    
-    func toSettings(){
-        performSegueWithIdentifier("messageToSettings", sender: self)
-    }
-    
-    func toMoney(){
-        performSegueWithIdentifier("messageToMoney", sender: self)
-    }
-    
-    func toEvent(){
-        performSegueWithIdentifier("messageToEvent", sender: self)
-    }
-    
     func setupSwipeGestures() {
         var swipeRight = UISwipeGestureRecognizer(target: self, action: "respondToSwipeGesture:")
         swipeRight.direction = UISwipeGestureRecognizerDirection.Right
         self.view.addGestureRecognizer(swipeRight)
-        
-        var swipeLeft = UISwipeGestureRecognizer(target: self, action: "respondToSwipeGesture:")
-        swipeLeft.direction = UISwipeGestureRecognizerDirection.Left
-        self.view.addGestureRecognizer(swipeLeft)
     }
     
     func respondToSwipeGesture(gesture: UIGestureRecognizer) {
-        
         if let swipeGesture = gesture as? UISwipeGestureRecognizer {
             
             switch swipeGesture.direction {
             case UISwipeGestureRecognizerDirection.Right:
-                performSegueWithIdentifier("messageToMessageLeft", sender: self)
-            case UISwipeGestureRecognizerDirection.Left:
-                performSegueWithIdentifier("messageToMessageRight", sender: self)
+                performSegueWithIdentifier("eventRightToEvent", sender: self)
             default:
                 break
             }
@@ -118,7 +111,7 @@ class vcMessages: UIViewController {
         var label = UILabel(frame: CGRectMake(0, 0, 200, 21))
         label.center = CGPointMake(160, 284)
         label.textAlignment = NSTextAlignment.Center
-        label.text = "Messages"
+        label.text = "Event Right"
         self.view.addSubview(label)
         setupNavigation()
         // Do any additional setup after loading the view.

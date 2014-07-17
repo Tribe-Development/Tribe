@@ -8,7 +8,7 @@
 
 import UIKit
 
-class vcMessages: UIViewController {
+class vcMessagesLeft: UIViewController {
     
     func setupNavigation(){
         
@@ -73,26 +73,22 @@ class vcMessages: UIViewController {
     }
     
     func toChill(){
-        performSegueWithIdentifier("messageToChill", sender: self)
+        performSegueWithIdentifier("messageLeftToChill", sender: self)
     }
     
     func toSettings(){
-        performSegueWithIdentifier("messageToSettings", sender: self)
+        performSegueWithIdentifier("messageLeftToSettings", sender: self)
     }
     
     func toMoney(){
-        performSegueWithIdentifier("messageToMoney", sender: self)
+        performSegueWithIdentifier("messageLeftToMoney", sender: self)
     }
     
     func toEvent(){
-        performSegueWithIdentifier("messageToEvent", sender: self)
+        performSegueWithIdentifier("messageLeftToEvent", sender: self)
     }
     
     func setupSwipeGestures() {
-        var swipeRight = UISwipeGestureRecognizer(target: self, action: "respondToSwipeGesture:")
-        swipeRight.direction = UISwipeGestureRecognizerDirection.Right
-        self.view.addGestureRecognizer(swipeRight)
-        
         var swipeLeft = UISwipeGestureRecognizer(target: self, action: "respondToSwipeGesture:")
         swipeLeft.direction = UISwipeGestureRecognizerDirection.Left
         self.view.addGestureRecognizer(swipeLeft)
@@ -103,10 +99,8 @@ class vcMessages: UIViewController {
         if let swipeGesture = gesture as? UISwipeGestureRecognizer {
             
             switch swipeGesture.direction {
-            case UISwipeGestureRecognizerDirection.Right:
-                performSegueWithIdentifier("messageToMessageLeft", sender: self)
             case UISwipeGestureRecognizerDirection.Left:
-                performSegueWithIdentifier("messageToMessageRight", sender: self)
+                performSegueWithIdentifier("messageLeftToMessage", sender: self)
             default:
                 break
             }
@@ -118,7 +112,7 @@ class vcMessages: UIViewController {
         var label = UILabel(frame: CGRectMake(0, 0, 200, 21))
         label.center = CGPointMake(160, 284)
         label.textAlignment = NSTextAlignment.Center
-        label.text = "Messages"
+        label.text = "Messages Left"
         self.view.addSubview(label)
         setupNavigation()
         // Do any additional setup after loading the view.

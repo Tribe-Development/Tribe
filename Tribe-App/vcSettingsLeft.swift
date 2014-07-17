@@ -8,7 +8,7 @@
 
 import UIKit
 
-class vcMessages: UIViewController {
+class vcSettingsLeft: UIViewController {
     
     func setupNavigation(){
         
@@ -31,8 +31,8 @@ class vcMessages: UIViewController {
         //Message Button
         let messageButton : UIButton = UIButton.buttonWithType(UIButtonType.Custom) as UIButton
         messageButton.frame = CGRectMake(128, 509, 64, 59)
-        messageButton.backgroundColor = UIColorFromRGB(0x33CC4D)
-        messageButton.addTarget(self, action: Selector("doNothing"), forControlEvents: UIControlEvents.TouchUpInside)
+        messageButton.backgroundColor = UIColorFromRGB(0x33CC99)
+        messageButton.addTarget(self, action: Selector("toMessage"), forControlEvents: UIControlEvents.TouchUpInside)
         messageButton.setTitle("Messge", forState: UIControlState.Normal)
         self.view.addSubview(messageButton)
         
@@ -47,10 +47,30 @@ class vcMessages: UIViewController {
         //Settings Button
         let settingsButton : UIButton = UIButton.buttonWithType(UIButtonType.Custom) as UIButton
         settingsButton.frame = CGRectMake(256, 509, 64, 59)
-        settingsButton.backgroundColor = UIColorFromRGB(0x33CC99)
-        settingsButton.addTarget(self, action: Selector("toSettings"), forControlEvents: UIControlEvents.TouchUpInside)
+        settingsButton.backgroundColor = UIColorFromRGB(0x33CC4D)
+        settingsButton.addTarget(self, action: Selector("doNothing"), forControlEvents: UIControlEvents.TouchUpInside)
         settingsButton.setTitle("Set's", forState: UIControlState.Normal)
         self.view.addSubview(settingsButton)
+    }
+    
+    func doNothing() {
+        //Does Nothing!
+    }
+    
+    func toMoney(){
+        performSegueWithIdentifier("settingsLeftToMoney", sender: self)
+    }
+    
+    func toChill(){
+        performSegueWithIdentifier("settingsLeftToChill", sender: self)
+    }
+    
+    func toEvent(){
+        performSegueWithIdentifier("settingsLeftToMoney", sender: self)
+    }
+    
+    func toMessage(){
+        performSegueWithIdentifier("settingsLeftToMessage", sender: self)
     }
     
     //Lets you pass a hexadecimal value and make a UIColor object from it
@@ -68,31 +88,7 @@ class vcMessages: UIViewController {
         self.presentViewController(loginAlert, animated: true, completion: nil)
     }
     
-    func doNothing() {
-        //Does Nothing!
-    }
-    
-    func toChill(){
-        performSegueWithIdentifier("messageToChill", sender: self)
-    }
-    
-    func toSettings(){
-        performSegueWithIdentifier("messageToSettings", sender: self)
-    }
-    
-    func toMoney(){
-        performSegueWithIdentifier("messageToMoney", sender: self)
-    }
-    
-    func toEvent(){
-        performSegueWithIdentifier("messageToEvent", sender: self)
-    }
-    
     func setupSwipeGestures() {
-        var swipeRight = UISwipeGestureRecognizer(target: self, action: "respondToSwipeGesture:")
-        swipeRight.direction = UISwipeGestureRecognizerDirection.Right
-        self.view.addGestureRecognizer(swipeRight)
-        
         var swipeLeft = UISwipeGestureRecognizer(target: self, action: "respondToSwipeGesture:")
         swipeLeft.direction = UISwipeGestureRecognizerDirection.Left
         self.view.addGestureRecognizer(swipeLeft)
@@ -103,10 +99,8 @@ class vcMessages: UIViewController {
         if let swipeGesture = gesture as? UISwipeGestureRecognizer {
             
             switch swipeGesture.direction {
-            case UISwipeGestureRecognizerDirection.Right:
-                performSegueWithIdentifier("messageToMessageLeft", sender: self)
             case UISwipeGestureRecognizerDirection.Left:
-                performSegueWithIdentifier("messageToMessageRight", sender: self)
+                performSegueWithIdentifier("settingsLeftToSettings", sender: self)
             default:
                 break
             }
@@ -118,7 +112,7 @@ class vcMessages: UIViewController {
         var label = UILabel(frame: CGRectMake(0, 0, 200, 21))
         label.center = CGPointMake(160, 284)
         label.textAlignment = NSTextAlignment.Center
-        label.text = "Messages"
+        label.text = "Settings Left"
         self.view.addSubview(label)
         setupNavigation()
         // Do any additional setup after loading the view.

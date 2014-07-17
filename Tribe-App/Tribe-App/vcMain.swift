@@ -158,7 +158,6 @@ class vcMain: UIViewController {
                 if(responseCode == 200) {
                     serial = jsonResponse.valueForKey("token")
                 }
-                println(serial)
             }
             self.loginCheck(responseCode, tempUsername: tempUsername, tempPassword: tempPassword, tempSerial: serial as String)
             })
@@ -237,7 +236,6 @@ class vcMain: UIViewController {
             alertAction in
             self.loginAlert()
             }))
-
         self.presentViewController(loginAlert, animated: true, completion: nil)
     }
     

@@ -10,9 +10,6 @@ import UIKit
 
 class vcChill: UIViewController {
     
-    func setupChatApp() {
-    }
-    
     func setupNavigation(){
         
         //Money Button
@@ -91,7 +88,38 @@ class vcChill: UIViewController {
         self.presentViewController(loginAlert, animated: true, completion: nil)
     }
     
+    func setupSwipeGestures() {
+        var swipeRight = UISwipeGestureRecognizer(target: self, action: "respondToSwipeGesture:")
+        swipeRight.direction = UISwipeGestureRecognizerDirection.Right
+        self.view.addGestureRecognizer(swipeRight)
+        
+        var swipeLeft = UISwipeGestureRecognizer(target: self, action: "respondToSwipeGesture:")
+        swipeLeft.direction = UISwipeGestureRecognizerDirection.Left
+        self.view.addGestureRecognizer(swipeLeft)
+    }
+    
+    func respondToSwipeGesture(gesture: UIGestureRecognizer) {
+        
+        if let swipeGesture = gesture as? UISwipeGestureRecognizer {
+            
+            switch swipeGesture.direction {
+            case UISwipeGestureRecognizerDirection.Right:
+                performSegueWithIdentifier("chillToChillLeft", sender: self)
+            case UISwipeGestureRecognizerDirection.Left:
+                performSegueWithIdentifier("chillToChillRight", sender: self)
+            default:
+                break
+            }
+        }
+    }
+    
     override func viewDidLoad() {
+        setupSwipeGestures()
+        var label = UILabel(frame: CGRectMake(0, 0, 200, 21))
+        label.center = CGPointMake(160, 284)
+        label.textAlignment = NSTextAlignment.Center
+        label.text = "Chill"
+        self.view.addSubview(label)
         setupNavigation()
         // Do any additional setup after loading the view.
     }

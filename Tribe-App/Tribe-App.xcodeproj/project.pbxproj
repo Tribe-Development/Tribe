@@ -8,6 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		044F961B1973846800FA8D2B /* tribe.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 044F961A1973846800FA8D2B /* tribe.jpg */; };
+		046A24D819786B2D00745194 /* vcMessagesLeft.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046A24D719786B2D00745194 /* vcMessagesLeft.swift */; };
+		046A24DA197871B400745194 /* vcMessagesRight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046A24D9197871B400745194 /* vcMessagesRight.swift */; };
+		046A24DC1978768100745194 /* vcEventLeft.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046A24DB1978768100745194 /* vcEventLeft.swift */; };
+		046A24DE1978769000745194 /* vcEventRight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046A24DD1978769000745194 /* vcEventRight.swift */; };
+		046A24E019787CAF00745194 /* vcMoneyRight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046A24DF19787CAF00745194 /* vcMoneyRight.swift */; };
+		046A24E219787CCF00745194 /* vcMoneyLeft.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046A24E119787CCF00745194 /* vcMoneyLeft.swift */; };
+		046A24E41978826600745194 /* vcChillLeft.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046A24E31978826600745194 /* vcChillLeft.swift */; };
+		046A24E61978827700745194 /* vcChillRight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046A24E51978827700745194 /* vcChillRight.swift */; };
+		046A24E81978839500745194 /* vcSettingsLeft.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046A24E71978839500745194 /* vcSettingsLeft.swift */; };
+		046A24EA197883A300745194 /* vcSettingsRight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046A24E9197883A300745194 /* vcSettingsRight.swift */; };
 		047428F4197842030032C900 /* vcMessages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047428F3197842030032C900 /* vcMessages.swift */; };
 		047428F6197842780032C900 /* vcMoney.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047428F5197842780032C900 /* vcMoney.swift */; };
 		047428F8197842A10032C900 /* vcEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047428F7197842A10032C900 /* vcEvent.swift */; };
@@ -33,6 +43,16 @@
 
 /* Begin PBXFileReference section */
 		044F961A1973846800FA8D2B /* tribe.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = tribe.jpg; path = ../../../../../Downloads/tribe.jpg; sourceTree = "<group>"; };
+		046A24D719786B2D00745194 /* vcMessagesLeft.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = vcMessagesLeft.swift; path = ../vcMessagesLeft.swift; sourceTree = "<group>"; };
+		046A24D9197871B400745194 /* vcMessagesRight.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = vcMessagesRight.swift; path = ../vcMessagesRight.swift; sourceTree = "<group>"; };
+		046A24DB1978768100745194 /* vcEventLeft.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = vcEventLeft.swift; path = ../vcEventLeft.swift; sourceTree = "<group>"; };
+		046A24DD1978769000745194 /* vcEventRight.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = vcEventRight.swift; path = ../vcEventRight.swift; sourceTree = "<group>"; };
+		046A24DF19787CAF00745194 /* vcMoneyRight.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = vcMoneyRight.swift; path = ../vcMoneyRight.swift; sourceTree = "<group>"; };
+		046A24E119787CCF00745194 /* vcMoneyLeft.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = vcMoneyLeft.swift; path = ../vcMoneyLeft.swift; sourceTree = "<group>"; };
+		046A24E31978826600745194 /* vcChillLeft.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = vcChillLeft.swift; path = ../vcChillLeft.swift; sourceTree = "<group>"; };
+		046A24E51978827700745194 /* vcChillRight.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = vcChillRight.swift; path = ../vcChillRight.swift; sourceTree = "<group>"; };
+		046A24E71978839500745194 /* vcSettingsLeft.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = vcSettingsLeft.swift; path = ../vcSettingsLeft.swift; sourceTree = "<group>"; };
+		046A24E9197883A300745194 /* vcSettingsRight.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = vcSettingsRight.swift; path = ../vcSettingsRight.swift; sourceTree = "<group>"; };
 		047428F3197842030032C900 /* vcMessages.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = vcMessages.swift; path = ../vcMessages.swift; sourceTree = "<group>"; };
 		047428F5197842780032C900 /* vcMoney.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = vcMoney.swift; path = ../vcMoney.swift; sourceTree = "<group>"; };
 		047428F7197842A10032C900 /* vcEvent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = vcEvent.swift; path = ../vcEvent.swift; sourceTree = "<group>"; };
@@ -95,11 +115,21 @@
 				04C807C7197068180019ABDD /* Supporting Files */,
 				044F961A1973846800FA8D2B /* tribe.jpg */,
 				04E1BAC919779ACA00F83A10 /* Storyboard.storyboard */,
+				046A24DF19787CAF00745194 /* vcMoneyRight.swift */,
 				047428F5197842780032C900 /* vcMoney.swift */,
+				046A24E119787CCF00745194 /* vcMoneyLeft.swift */,
+				046A24DD1978769000745194 /* vcEventRight.swift */,
 				047428F7197842A10032C900 /* vcEvent.swift */,
+				046A24DB1978768100745194 /* vcEventLeft.swift */,
+				046A24D9197871B400745194 /* vcMessagesRight.swift */,
 				047428F3197842030032C900 /* vcMessages.swift */,
+				046A24D719786B2D00745194 /* vcMessagesLeft.swift */,
+				046A24E51978827700745194 /* vcChillRight.swift */,
 				047428F9197842C70032C900 /* vcChill.swift */,
+				046A24E31978826600745194 /* vcChillLeft.swift */,
+				046A24E9197883A300745194 /* vcSettingsRight.swift */,
 				047428FB197842E10032C900 /* vcSettings.swift */,
+				046A24E71978839500745194 /* vcSettingsLeft.swift */,
 				04C807E61970697E0019ABDD /* vcMain.swift */,
 			);
 			path = "Tribe-App";
@@ -230,13 +260,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				046A24E61978827700745194 /* vcChillRight.swift in Sources */,
 				04C807CD197068180019ABDD /* Tribe_App.xcdatamodeld in Sources */,
 				04C807E71970697E0019ABDD /* vcMain.swift in Sources */,
 				04C807CA197068180019ABDD /* AppDelegate.swift in Sources */,
+				046A24E41978826600745194 /* vcChillLeft.swift in Sources */,
+				046A24E81978839500745194 /* vcSettingsLeft.swift in Sources */,
+				046A24E019787CAF00745194 /* vcMoneyRight.swift in Sources */,
+				046A24DA197871B400745194 /* vcMessagesRight.swift in Sources */,
+				046A24EA197883A300745194 /* vcSettingsRight.swift in Sources */,
 				047428F6197842780032C900 /* vcMoney.swift in Sources */,
 				047428FA197842C70032C900 /* vcChill.swift in Sources */,
+				046A24DC1978768100745194 /* vcEventLeft.swift in Sources */,
 				047428FC197842E10032C900 /* vcSettings.swift in Sources */,
+				046A24D819786B2D00745194 /* vcMessagesLeft.swift in Sources */,
 				047428F4197842030032C900 /* vcMessages.swift in Sources */,
+				046A24DE1978769000745194 /* vcEventRight.swift in Sources */,
+				046A24E219787CCF00745194 /* vcMoneyLeft.swift in Sources */,
 				047428F8197842A10032C900 /* vcEvent.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

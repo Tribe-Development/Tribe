@@ -10,16 +10,12 @@ import UIKit
 
 class vcSettings: UIViewController {
     
-    func setupChatApp() {
-    }
-    
     func setupNavigation(){
         
         //Money Button
         let moneyButton : UIButton = UIButton.buttonWithType(UIButtonType.Custom) as UIButton
         moneyButton.frame = CGRectMake(0, 509, 64, 59)
-        moneyButton.backgroundColor = UIColorFromRGB(0x33CC99)
-        //TODO: Make this go to function that goes to page
+        moneyButton.backgroundColor = UIColorFromRGB(0x33CC99) 
         moneyButton.addTarget(self, action: Selector("toMoney"), forControlEvents: UIControlEvents.TouchUpInside)
         moneyButton.setTitle("Money", forState: UIControlState.Normal)
         self.view.addSubview(moneyButton)
@@ -27,8 +23,7 @@ class vcSettings: UIViewController {
         //Event Button
         let eventButton : UIButton = UIButton.buttonWithType(UIButtonType.Custom) as UIButton
         eventButton.frame = CGRectMake(64, 509, 64, 59)
-        eventButton.backgroundColor = UIColorFromRGB(0x33CC99)
-        //TODO: Make this go to function that goes to page
+        eventButton.backgroundColor = UIColorFromRGB(0x33CC99) 
         eventButton.addTarget(self, action: Selector("toEvent"), forControlEvents: UIControlEvents.TouchUpInside)
         eventButton.setTitle("Event", forState: UIControlState.Normal)
         self.view.addSubview(eventButton)
@@ -36,8 +31,7 @@ class vcSettings: UIViewController {
         //Message Button
         let messageButton : UIButton = UIButton.buttonWithType(UIButtonType.Custom) as UIButton
         messageButton.frame = CGRectMake(128, 509, 64, 59)
-        messageButton.backgroundColor = UIColorFromRGB(0x33CC99)
-        //TODO: Make this go to function that goes to page
+        messageButton.backgroundColor = UIColorFromRGB(0x33CC99) 
         messageButton.addTarget(self, action: Selector("toMessage"), forControlEvents: UIControlEvents.TouchUpInside)
         messageButton.setTitle("Messge", forState: UIControlState.Normal)
         self.view.addSubview(messageButton)
@@ -45,8 +39,7 @@ class vcSettings: UIViewController {
         //Chill Button
         let chillButton : UIButton = UIButton.buttonWithType(UIButtonType.Custom) as UIButton
         chillButton.frame = CGRectMake(192, 509, 64, 59)
-        chillButton.backgroundColor = UIColorFromRGB(0x33CC99)
-        //TODO: Make this go to function that goes to page
+        chillButton.backgroundColor = UIColorFromRGB(0x33CC99) 
         chillButton.addTarget(self, action: Selector("toChill"), forControlEvents: UIControlEvents.TouchUpInside)
         chillButton.setTitle("Chill", forState: UIControlState.Normal)
         self.view.addSubview(chillButton)
@@ -54,8 +47,7 @@ class vcSettings: UIViewController {
         //Settings Button
         let settingsButton : UIButton = UIButton.buttonWithType(UIButtonType.Custom) as UIButton
         settingsButton.frame = CGRectMake(256, 509, 64, 59)
-        settingsButton.backgroundColor = UIColorFromRGB(0x33CC4D)
-        //TODO: Make this go to function that goes to page
+        settingsButton.backgroundColor = UIColorFromRGB(0x33CC4D) 
         settingsButton.addTarget(self, action: Selector("doNothing"), forControlEvents: UIControlEvents.TouchUpInside)
         settingsButton.setTitle("Set's", forState: UIControlState.Normal)
         self.view.addSubview(settingsButton)
@@ -96,7 +88,38 @@ class vcSettings: UIViewController {
         self.presentViewController(loginAlert, animated: true, completion: nil)
     }
     
+    func setupSwipeGestures() {
+        var swipeRight = UISwipeGestureRecognizer(target: self, action: "respondToSwipeGesture:")
+        swipeRight.direction = UISwipeGestureRecognizerDirection.Right
+        self.view.addGestureRecognizer(swipeRight)
+        
+        var swipeLeft = UISwipeGestureRecognizer(target: self, action: "respondToSwipeGesture:")
+        swipeLeft.direction = UISwipeGestureRecognizerDirection.Left
+        self.view.addGestureRecognizer(swipeLeft)
+    }
+    
+    func respondToSwipeGesture(gesture: UIGestureRecognizer) {
+        
+        if let swipeGesture = gesture as? UISwipeGestureRecognizer {
+            
+            switch swipeGesture.direction {
+            case UISwipeGestureRecognizerDirection.Right:
+                performSegueWithIdentifier("settingsToSettingsLeft", sender: self)
+            case UISwipeGestureRecognizerDirection.Left:
+                performSegueWithIdentifier("settingsToSettingsRight", sender: self)
+            default:
+                break
+            }
+        }
+    }
+    
     override func viewDidLoad() {
+        setupSwipeGestures()
+        var label = UILabel(frame: CGRectMake(0, 0, 200, 21))
+        label.center = CGPointMake(160, 284)
+        label.textAlignment = NSTextAlignment.Center
+        label.text = "Settings"
+        self.view.addSubview(label)
         setupNavigation()
         // Do any additional setup after loading the view.
     }
