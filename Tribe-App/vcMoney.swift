@@ -8,28 +8,28 @@
 
 import UIKit
 
-class vcController: UIViewController {
-
+class vcMoney: UIViewController {
+    
     func setupChatApp() {
     }
     
     func setupNavigation(){
         
-        //Moneybag Button
+        //Money Button
         let moneyButton : UIButton = UIButton.buttonWithType(UIButtonType.Custom) as UIButton
         moneyButton.frame = CGRectMake(0, 509, 64, 59)
-        moneyButton.backgroundColor = UIColorFromRGB(0x33CC99)
+        moneyButton.backgroundColor = UIColorFromRGB(0x33CC4D)
         //TODO: Make this go to function that goes to page
-        moneyButton.addTarget(self, action: Selector("notImplemented"), forControlEvents: UIControlEvents.TouchUpInside)
+        moneyButton.addTarget(self, action: Selector("doNothing"), forControlEvents: UIControlEvents.TouchUpInside)
         moneyButton.setTitle("Money", forState: UIControlState.Normal)
         self.view.addSubview(moneyButton)
         
-        //Sign Up Button
+        //Event Button
         let eventButton : UIButton = UIButton.buttonWithType(UIButtonType.Custom) as UIButton
         eventButton.frame = CGRectMake(64, 509, 64, 59)
         eventButton.backgroundColor = UIColorFromRGB(0x33CC99)
         //TODO: Make this go to function that goes to page
-        eventButton.addTarget(self, action: Selector("notImplemented"), forControlEvents: UIControlEvents.TouchUpInside)
+        eventButton.addTarget(self, action: Selector("toEvent"), forControlEvents: UIControlEvents.TouchUpInside)
         eventButton.setTitle("Event", forState: UIControlState.Normal)
         self.view.addSubview(eventButton)
         
@@ -38,7 +38,7 @@ class vcController: UIViewController {
         messageButton.frame = CGRectMake(128, 509, 64, 59)
         messageButton.backgroundColor = UIColorFromRGB(0x33CC99)
         //TODO: Make this go to function that goes to page
-        messageButton.addTarget(self, action: Selector("notImplemented"), forControlEvents: UIControlEvents.TouchUpInside)
+        messageButton.addTarget(self, action: Selector("toMessage"), forControlEvents: UIControlEvents.TouchUpInside)
         messageButton.setTitle("Messge", forState: UIControlState.Normal)
         self.view.addSubview(messageButton)
         
@@ -47,7 +47,7 @@ class vcController: UIViewController {
         chillButton.frame = CGRectMake(192, 509, 64, 59)
         chillButton.backgroundColor = UIColorFromRGB(0x33CC99)
         //TODO: Make this go to function that goes to page
-        chillButton.addTarget(self, action: Selector("notImplemented"), forControlEvents: UIControlEvents.TouchUpInside)
+        chillButton.addTarget(self, action: Selector("toChill"), forControlEvents: UIControlEvents.TouchUpInside)
         chillButton.setTitle("Chill", forState: UIControlState.Normal)
         self.view.addSubview(chillButton)
         
@@ -56,9 +56,29 @@ class vcController: UIViewController {
         settingsButton.frame = CGRectMake(256, 509, 64, 59)
         settingsButton.backgroundColor = UIColorFromRGB(0x33CC99)
         //TODO: Make this go to function that goes to page
-        settingsButton.addTarget(self, action: Selector("notImplemented"), forControlEvents: UIControlEvents.TouchUpInside)
+        settingsButton.addTarget(self, action: Selector("toSettings"), forControlEvents: UIControlEvents.TouchUpInside)
         settingsButton.setTitle("Set's", forState: UIControlState.Normal)
         self.view.addSubview(settingsButton)
+    }
+    
+    func doNothing() {
+        //Does Nothing!
+    }
+    
+    func toChill(){
+        performSegueWithIdentifier("moneyToChill", sender: self)
+    }
+    
+    func toSettings(){
+        performSegueWithIdentifier("moneyToSettings", sender: self)
+    }
+    
+    func toEvent(){
+        performSegueWithIdentifier("moneyToEvent", sender: self)
+    }
+    
+    func toMessage(){
+        performSegueWithIdentifier("moneyToMessage", sender: self)
     }
     
     //Lets you pass a hexadecimal value and make a UIColor object from it
@@ -85,5 +105,5 @@ class vcController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
+    
 }

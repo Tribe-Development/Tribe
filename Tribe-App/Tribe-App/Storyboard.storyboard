@@ -23,12 +23,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="S9e-gE-Rth" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="482" y="421"/>
+            <point key="canvasLocation" x="208" y="-545"/>
         </scene>
-        <!--Vc Controller-->
+        <!--Vc Messages-->
         <scene sceneID="vuk-fl-Kqo">
             <objects>
-                <viewController id="Ws9-rr-WBd" customClass="vcController" customModule="Tribe_App" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Ws9-rr-WBd" customClass="vcMessages" customModule="Tribe_App" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="vLN-f2-zsF"/>
                         <viewControllerLayoutGuide type="bottom" id="Nxz-uu-fNz"/>
@@ -39,10 +39,113 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="Bid-dm-NYy"/>
+                    <connections>
+                        <segue destination="mY4-e8-F7L" kind="modal" identifier="messageToChill" modalTransitionStyle="crossDissolve" animates="NO" id="dpg-gG-k3f"/>
+                        <segue destination="xxr-xt-b08" kind="modal" identifier="messageToSettings" modalTransitionStyle="crossDissolve" animates="NO" id="7yB-Um-4rb"/>
+                        <segue destination="Jf5-ew-Hjh" kind="modal" identifier="messageToEvent" modalTransitionStyle="crossDissolve" animates="NO" id="uaf-yc-G4i"/>
+                        <segue destination="Lr6-td-NKi" kind="modal" identifier="messageToMoney" modalTransitionStyle="crossDissolve" animates="NO" id="kiF-ak-YAQ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hMt-LN-8db" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="882" y="424"/>
+            <point key="canvasLocation" x="1286" y="-655"/>
+        </scene>
+        <!--Vc Chill-->
+        <scene sceneID="fkF-aB-4rc">
+            <objects>
+                <viewController id="mY4-e8-F7L" customClass="vcChill" customModule="Tribe_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="BJG-Vs-LQ8"/>
+                        <viewControllerLayoutGuide type="bottom" id="ltl-4d-c5i"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="t5C-X0-CvN">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="ck7-ta-6ws"/>
+                    <connections>
+                        <segue destination="xxr-xt-b08" kind="modal" identifier="chillToSettings" modalTransitionStyle="crossDissolve" animates="NO" id="txx-uF-2mj"/>
+                        <segue destination="Ws9-rr-WBd" kind="modal" identifier="chillToMessage" modalTransitionStyle="crossDissolve" animates="NO" id="0hn-yA-ph8"/>
+                        <segue destination="Jf5-ew-Hjh" kind="modal" identifier="chillToEvent" modalTransitionStyle="crossDissolve" animates="NO" id="j0l-Lt-0eN"/>
+                        <segue destination="Lr6-td-NKi" kind="modal" identifier="chillToMoney" modalTransitionStyle="crossDissolve" animates="NO" id="l0s-5u-lXI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="353-zW-sae" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3142" y="-647"/>
+        </scene>
+        <!--Vc Settings-->
+        <scene sceneID="kXc-r5-pMz">
+            <objects>
+                <viewController id="xxr-xt-b08" customClass="vcSettings" customModule="Tribe_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="LTz-7m-pNL"/>
+                        <viewControllerLayoutGuide type="bottom" id="Yb0-iO-0N3"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="b3G-T6-tlY">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <segue destination="mY4-e8-F7L" kind="modal" identifier="settingsToChill" modalTransitionStyle="crossDissolve" animates="NO" id="Rxq-qD-bp8"/>
+                        <segue destination="Ws9-rr-WBd" kind="modal" identifier="settingsToMessage" modalTransitionStyle="crossDissolve" animates="NO" id="Qkx-AD-858"/>
+                        <segue destination="Jf5-ew-Hjh" kind="modal" identifier="settingsToEvent" modalTransitionStyle="crossDissolve" animates="NO" id="DPZ-8f-ael"/>
+                        <segue destination="Lr6-td-NKi" kind="modal" identifier="settingsToMoney" modalTransitionStyle="crossDissolve" animates="NO" id="O1P-Z8-4nR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AHp-Hg-PW4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3750" y="633"/>
+        </scene>
+        <!--Vc Event-->
+        <scene sceneID="iSo-4O-hKS">
+            <objects>
+                <viewController id="Jf5-ew-Hjh" customClass="vcEvent" customModule="Tribe_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="4ck-Za-GOr"/>
+                        <viewControllerLayoutGuide type="bottom" id="4jZ-KE-XzS"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="RB3-GW-ikg">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <segue destination="xxr-xt-b08" kind="modal" identifier="eventToSettings" modalTransitionStyle="crossDissolve" animates="NO" id="xGN-5x-3Q9"/>
+                        <segue destination="mY4-e8-F7L" kind="modal" identifier="eventToChill" modalTransitionStyle="crossDissolve" animates="NO" id="igY-tF-9M9"/>
+                        <segue destination="Ws9-rr-WBd" kind="modal" identifier="eventToMessage" modalTransitionStyle="crossDissolve" animates="NO" id="YvX-Ow-whX"/>
+                        <segue destination="Lr6-td-NKi" kind="modal" identifier="eventToMoney" modalTransitionStyle="crossDissolve" animates="NO" id="yeg-o8-iuy"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oO9-HF-bwa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2247" y="1547"/>
+        </scene>
+        <!--Vc Money-->
+        <scene sceneID="lGB-tx-0BA">
+            <objects>
+                <viewController id="Lr6-td-NKi" customClass="vcMoney" customModule="Tribe_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="mPO-CW-GMw"/>
+                        <viewControllerLayoutGuide type="bottom" id="vZY-s5-lCE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="YRi-tD-R2M">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <segue destination="Jf5-ew-Hjh" kind="modal" identifier="moneyToEvent" modalTransitionStyle="crossDissolve" animates="NO" id="2KW-to-4Vm"/>
+                        <segue destination="Ws9-rr-WBd" kind="modal" identifier="moneyToMessage" modalTransitionStyle="crossDissolve" animates="NO" id="UrR-cO-TPc"/>
+                        <segue destination="xxr-xt-b08" kind="modal" identifier="moneyToSettings" modalTransitionStyle="crossDissolve" animates="NO" id="Bt8-9b-Gmf"/>
+                        <segue destination="mY4-e8-F7L" kind="modal" identifier="moneyToChill" modalTransitionStyle="crossDissolve" animates="NO" id="JNc-hQ-X4W"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DYB-lk-t0j" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="584" y="661"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
@@ -50,4 +153,11 @@
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
+    <inferredMetricsTieBreakers>
+        <segue reference="DPZ-8f-ael"/>
+        <segue reference="xGN-5x-3Q9"/>
+        <segue reference="O1P-Z8-4nR"/>
+        <segue reference="Rxq-qD-bp8"/>
+        <segue reference="bIO-dX-sfS"/>
+    </inferredMetricsTieBreakers>
 </document>
