@@ -11,19 +11,37 @@ import CoreData
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
-                            
+    let userDefaults = NSUserDefaults.standardUserDefaults()
     var window: UIWindow?
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: NSDictionary?) -> Bool {
-        self.window = UIWindow(frame: UIScreen.mainScreen().bounds)
-        // Override point for customization after application launch.
-        self.window!.backgroundColor = UIColor.whiteColor()
-        // Make view controller
-        var mainController: UIViewController = vcMain()
-        self.window!.rootViewController = mainController
-        self.window!.makeKeyAndVisible()
+//        self.window = UIWindow(frame: UIScreen.mainScreen().bounds)
+//        self.window!.backgroundColor = UIColor.whiteColor()
+//        //NOTE: uncomment this to debug login page
+//        clearUserDefaults()
+//        checkDefaults()
         return true
     }
 
+//    func checkDefaults() {
+//        var userUsername: AnyObject? = userDefaults.objectForKey("username")
+//        if(userUsername != nil) {
+//            var mainController: UIViewController = vcController()
+//            self.window!.rootViewController = mainController
+//            self.window!.makeKeyAndVisible()
+//        }
+//        else {
+//            var mainController: UIViewController = vcMain()
+//            self.window!.rootViewController = mainController
+//            self.window!.makeKeyAndVisible()
+//        }
+//    }
+//    
+//    func clearUserDefaults() {
+//        userDefaults.removeObjectForKey("username")
+//        userDefaults.removeObjectForKey("password")
+//        userDefaults.removeObjectForKey("serial")
+//    }
+    
     func applicationWillResignActive(application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
         // Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.

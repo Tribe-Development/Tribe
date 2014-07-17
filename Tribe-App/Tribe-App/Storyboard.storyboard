@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6154.21" systemVersion="14A261i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="VOI-ub-Jpb">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6153.13"/>
+    </dependencies>
+    <scenes>
+        <!--Vc Main-->
+        <scene sceneID="Gkh-ZZ-erB">
+            <objects>
+                <viewController id="VOI-ub-Jpb" customClass="vcMain" customModule="Tribe_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="SGY-PI-Pka"/>
+                        <viewControllerLayoutGuide type="bottom" id="nrT-85-B4c"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="VTA-Q9-y4E">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <segue destination="Ws9-rr-WBd" kind="modal" identifier="loggedIn" modalTransitionStyle="crossDissolve" id="bIO-dX-sfS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="S9e-gE-Rth" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="482" y="421"/>
+        </scene>
+        <!--Vc Controller-->
+        <scene sceneID="vuk-fl-Kqo">
+            <objects>
+                <viewController id="Ws9-rr-WBd" customClass="vcController" customModule="Tribe_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="vLN-f2-zsF"/>
+                        <viewControllerLayoutGuide type="bottom" id="Nxz-uu-fNz"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="NZB-5d-zjg">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Bid-dm-NYy"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hMt-LN-8db" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="882" y="424"/>
+        </scene>
+    </scenes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>

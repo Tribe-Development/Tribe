@@ -14,35 +14,7 @@ import CoreData
 class vcMain: UIViewController {
     let userDefaults = NSUserDefaults.standardUserDefaults()
     
-    override func viewDidAppear(animated: Bool) {
-        var userUsername: AnyObject? = userDefaults.objectForKey("username")
-        if(userUsername != nil) {
-            setupHomeView()
-        }
-        else
-        {
-            println("User: \(userUsername) already Setup")
-            //change this to go to other view
-            setupHomeView()
-        }
-    }
-    
-    func clearUserDefaults() {
-        userDefaults.removeObjectForKey("username")
-        userDefaults.removeObjectForKey("password")
-        userDefaults.removeObjectForKey("serial")
-    }
-    
-    func getUserDefaults() -> NSDictionary {
-        var userUsername: AnyObject? = userDefaults.objectForKey("username")
-        var userPassword: AnyObject? = userDefaults.objectForKey("password")
-        var userSerial: AnyObject? = userDefaults.objectForKey("serial")
-        var userDict: NSDictionary = ["username": userUsername,"password": userPassword, "serial": userSerial]
-        return userDict
-    }
-    
-    func setupHomeView()
-    {
+    func setupHomeView(){
         var imageView = UIImageView(frame: CGRectMake(0, 0, 320, 450));
         var image = UIImage(named: "tribe.jpg");
         imageView.image = image;
@@ -63,6 +35,20 @@ class vcMain: UIViewController {
         signUpButton.addTarget(self, action: Selector("registerAlert"), forControlEvents: UIControlEvents.TouchUpInside)
         signUpButton.setTitle("Sign Up", forState: UIControlState.Normal)
         self.view.addSubview(signUpButton)
+    }
+    
+    func clearUserDefaults() {
+        userDefaults.removeObjectForKey("username")
+        userDefaults.removeObjectForKey("password")
+        userDefaults.removeObjectForKey("serial")
+    }
+    
+    func getUserDefaults() -> NSDictionary {
+        var userUsername: AnyObject? = userDefaults.objectForKey("username")
+        var userPassword: AnyObject? = userDefaults.objectForKey("password")
+        var userSerial: AnyObject? = userDefaults.objectForKey("serial")
+        var userDict: NSDictionary = ["username": userUsername,"password": userPassword, "serial": userSerial]
+        return userDict
     }
     
     //Lets you pass a hexadecimal value and make a UIColor object from it
@@ -166,12 +152,10 @@ class vcMain: UIViewController {
             println("Response: \(response)")
             var err: NSError?
             //Don't parse json if there is none
-            if(data.length > 0)
-            {
+            if(data.length > 0) {
                 var jsonResponse = NSJSONSerialization.JSONObjectWithData(data, options: .MutableLeaves, error: &err) as NSDictionary
                 responseCode = httpResp.statusCode
-                if(responseCode == 200)
-                {
+                if(responseCode == 200) {
                     serial = jsonResponse.valueForKey("token")
                 }
                 println(serial)
@@ -213,51 +197,41 @@ class vcMain: UIViewController {
         task.resume()
     }
 
-    
-    func loginCheck(responseCode: Int, tempUsername: String, tempPassword: String, tempSerial: String)-> Void
-    {
-        if(responseCode == 200)
-        {
+    func loginCheck(responseCode: Int, tempUsername: String, tempPassword: String, tempSerial: String)-> Void {
+        if(responseCode == 200) {
+            clearUserDefaults()
             userDefaults.setObject(tempUsername, forKey:"username")
             userDefaults.setObject(tempPassword, forKey:"password")
             userDefaults.setObject(tempSerial, forKey:"serial")
             userDefaults.synchronize()
-            var loginAlert:UIAlertController = UIAlertController(title: "Login Success!", message: "Setup moving to new view", preferredStyle: UIAlertControllerStyle.Alert)
-            self.presentViewController(loginAlert, animated: true, completion: nil)
+            self.performSegueWithIdentifier("loggedIn", sender: self)
         }
-        else if(responseCode == 400)
-        {
+        else if(responseCode == 400) {
             badRequest()
         }
-        else
-        {
+        else {
             forbiddenRequest("login")
         }
     }
     
-    func registrationCheck(responseCode: Int, tempUsername: String, tempPassword: String, tempSerial: String)-> Void
-    {
-        if(responseCode == 200)
-        {
+    func registrationCheck(responseCode: Int, tempUsername: String, tempPassword: String, tempSerial: String)-> Void {
+        if(responseCode == 200) {
+            clearUserDefaults()
             userDefaults.setObject(tempUsername, forKey:"username")
             userDefaults.setObject(tempPassword, forKey:"password")
             userDefaults.setObject(tempSerial, forKey:"serial")
             userDefaults.synchronize()
-            var loginAlert:UIAlertController = UIAlertController(title: "Registration Success!", message: "Setup moving to new view", preferredStyle: UIAlertControllerStyle.Alert)
-            self.presentViewController(loginAlert, animated: true, completion: nil)
+            self.performSegueWithIdentifier("loggedIn", sender: self)
         }
-        else if(responseCode == 400)
-        {
+        else if(responseCode == 400) {
             badRequest()
         }
-        else if(responseCode == 403)
-        {
+        else if(responseCode == 403) {
             forbiddenRequest("registration")
         }
     }
     
-    func badRequest()
-    {
+    func badRequest() {
         var loginAlert:UIAlertController = UIAlertController(title: "Error Bad Request", message: "Please check your parameters and try again!", preferredStyle: UIAlertControllerStyle.Alert)
         loginAlert.addAction(UIAlertAction(title: "Try Again", style: UIAlertActionStyle.Default, handler: {
             alertAction in
@@ -267,8 +241,7 @@ class vcMain: UIViewController {
         self.presentViewController(loginAlert, animated: true, completion: nil)
     }
     
-    func forbiddenRequest(type: String)
-    {
+    func forbiddenRequest(type: String) {
         if(type == "registration")
         {
             var loginAlert:UIAlertController = UIAlertController(title: "User Already Exists", message: "Incorrect User/Pass please check and try again!", preferredStyle: UIAlertControllerStyle.Alert)
@@ -289,9 +262,18 @@ class vcMain: UIViewController {
         }
     }
     
+    override func viewDidAppear(animated: Bool) {
+        var userUsername: AnyObject? = userDefaults.objectForKey("username")
+        if(userUsername != nil) {
+            performSegueWithIdentifier("loggedIn", sender: self)
+        }
+        else {
+            setupHomeView()
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
     }
     
     override func didReceiveMemoryWarning() {
