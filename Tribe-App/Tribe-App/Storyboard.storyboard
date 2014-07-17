@@ -223,7 +223,7 @@
                         <segue destination="Ws9-rr-WBd" kind="modal" identifier="settingsToMessage" modalTransitionStyle="crossDissolve" animates="NO" id="Qkx-AD-858"/>
                         <segue destination="Jf5-ew-Hjh" kind="modal" identifier="settingsToEvent" modalTransitionStyle="crossDissolve" animates="NO" id="DPZ-8f-ael"/>
                         <segue destination="Lr6-td-NKi" kind="modal" identifier="settingsToMoney" modalTransitionStyle="crossDissolve" animates="NO" id="O1P-Z8-4nR"/>
-                        <segue destination="mY4-e8-F7L" kind="modal" id="Ubu-Ix-b3R"/>
+                        <segue destination="mY4-e8-F7L" kind="modal" identifier="settingsToChill" modalTransitionStyle="crossDissolve" animates="NO" id="Ubu-Ix-b3R"/>
                         <segue destination="Pof-hH-F87" kind="modal" identifier="settingsToSettingsRight" animates="NO" id="V8g-L3-n8t"/>
                         <segue destination="cyz-m9-jFE" kind="modal" identifier="settingsToSettingsLeft" modalTransitionStyle="crossDissolve" animates="NO" id="eG9-04-Jda"/>
                     </connections>
@@ -420,10 +420,10 @@
         </simulatedScreenMetrics>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="lFC-Sx-69d"/>
-        <segue reference="zwW-uf-gBr"/>
-        <segue reference="g7X-mP-Ai3"/>
-        <segue reference="0MZ-Gg-XIJ"/>
-        <segue reference="ZZA-e0-8g9"/>
+        <segue reference="O1P-Z8-4nR"/>
+        <segue reference="pL1-EU-s0H"/>
+        <segue reference="DPZ-8f-ael"/>
+        <segue reference="Qkx-AD-858"/>
+        <segue reference="Ubu-Ix-b3R"/>
     </inferredMetricsTieBreakers>
 </document>
