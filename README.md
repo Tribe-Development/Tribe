@@ -15,7 +15,7 @@ Get latest code:
 git checkout master && git pull
 
 Open new branch:
-git checkout -b "<username>/my-branch-name"
+git checkout -b "*username*/my-branch-name"
 
 When you have made some changes and wish to save progress:
 git add <files you want to add>
