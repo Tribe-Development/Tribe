@@ -18,9 +18,9 @@ Open new branch:
 git checkout -b "*username*/my-branch-name"
 
 When you have made some changes and wish to save progress:
-git add <files you want to add>
+git add *files you want to add*
 git commit -m "meaningful message about changes"
-git push origin "<username>/my-branch-name"
+git push origin "*username*/my-branch-name"
 
 When you are sure your code is ready to be merged:
 Go to github.com/Tribe-Development and you will see your branch
