@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		044F961B1973846800FA8D2B /* tribe.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 044F961A1973846800FA8D2B /* tribe.jpg */; };
 		046A24D819786B2D00745194 /* vcMessagesLeft.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046A24D719786B2D00745194 /* vcMessagesLeft.swift */; };
 		046A24DA197871B400745194 /* vcMessagesRight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046A24D9197871B400745194 /* vcMessagesRight.swift */; };
 		046A24DC1978768100745194 /* vcEventLeft.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046A24DB1978768100745194 /* vcEventLeft.swift */; };
@@ -42,7 +41,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		044F961A1973846800FA8D2B /* tribe.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = tribe.jpg; path = ../../../../../Downloads/tribe.jpg; sourceTree = "<group>"; };
 		046A24D719786B2D00745194 /* vcMessagesLeft.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = vcMessagesLeft.swift; path = ../vcMessagesLeft.swift; sourceTree = "<group>"; };
 		046A24D9197871B400745194 /* vcMessagesRight.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = vcMessagesRight.swift; path = ../vcMessagesRight.swift; sourceTree = "<group>"; };
 		046A24DB1978768100745194 /* vcEventLeft.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = vcEventLeft.swift; path = ../vcEventLeft.swift; sourceTree = "<group>"; };
@@ -113,7 +111,6 @@
 				04C807CE197068180019ABDD /* Images.xcassets */,
 				04C807CB197068180019ABDD /* Tribe_App.xcdatamodeld */,
 				04C807C7197068180019ABDD /* Supporting Files */,
-				044F961A1973846800FA8D2B /* tribe.jpg */,
 				04E1BAC919779ACA00F83A10 /* Storyboard.storyboard */,
 				046A24DF19787CAF00745194 /* vcMoneyRight.swift */,
 				047428F5197842780032C900 /* vcMoney.swift */,
@@ -241,7 +238,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				04C807CF197068180019ABDD /* Images.xcassets in Resources */,
-				044F961B1973846800FA8D2B /* tribe.jpg in Resources */,
 				04E1BACA19779ACA00F83A10 /* Storyboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -387,7 +383,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "Tribe-App/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
@@ -402,7 +398,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "Tribe-App/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";

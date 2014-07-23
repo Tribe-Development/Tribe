@@ -43,13 +43,13 @@ class vcMain: UIViewController {
         userDefaults.removeObjectForKey("serial")
     }
     
-    func getUserDefaults() -> NSDictionary {
-        var userUsername: AnyObject? = userDefaults.objectForKey("username")
-        var userPassword: AnyObject? = userDefaults.objectForKey("password")
-        var userSerial: AnyObject? = userDefaults.objectForKey("serial")
-        var userDict: NSDictionary = ["username": userUsername,"password": userPassword, "serial": userSerial]
-        return userDict
-    }
+//    func getUserDefaults() -> NSDictionary {
+//        var userUsername: AnyObject? = userDefaults.objectForKey("username")
+//        var userPassword: AnyObject? = userDefaults.objectForKey("password")
+//        var userSerial: AnyObject? = userDefaults.objectForKey("serial")
+//        var userDict = ["username": userUsername,"password": userPassword, "serial": userSerial]
+//        return userDict
+//    }
     
     //Lets you pass a hexadecimal value and make a UIColor object from it
     func UIColorFromRGB(rgbValue: UInt) -> UIColor {
@@ -261,7 +261,7 @@ class vcMain: UIViewController {
     
     override func viewDidAppear(animated: Bool) {
         //NOTE: Uncomment this line to test login screen
-        clearUserDefaults()
+        //clearUserDefaults()
         var userUsername: AnyObject? = userDefaults.objectForKey("username")
         if(userUsername) {
             performSegueWithIdentifier("loggedIn", sender: self)

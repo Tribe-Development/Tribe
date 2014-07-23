@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6185.7" systemVersion="14A261i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="VOI-ub-Jpb">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6185.11" systemVersion="14A261i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="VOI-ub-Jpb">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6181.2"/>
+        <deployment defaultVersion="1792" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6190.4"/>
     </dependencies>
     <scenes>
         <!--Vc Main-->
@@ -351,7 +352,7 @@
                         <segue destination="Ws9-rr-WBd" kind="modal" identifier="moneyLeftToMessage" modalTransitionStyle="crossDissolve" animates="NO" id="7GA-Lt-F01"/>
                         <segue destination="Lr6-td-NKi" kind="modal" identifier="moneyLeftToMoney" modalTransitionStyle="crossDissolve" animates="NO" id="Jy4-k6-0rC"/>
                         <segue destination="mY4-e8-F7L" kind="modal" identifier="moneyLeftToChill" modalTransitionStyle="crossDissolve" animates="NO" id="NkB-KK-nOZ"/>
-                        <segue destination="xxr-xt-b08" kind="modal" modalTransitionStyle="crossDissolve" animates="NO" id="hEv-rf-2t0"/>
+                        <segue destination="xxr-xt-b08" kind="modal" identifier="moneyLeftToSettings" modalTransitionStyle="crossDissolve" animates="NO" id="hEv-rf-2t0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TGj-Df-mrt" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -402,7 +403,7 @@
                         <segue destination="Jf5-ew-Hjh" kind="modal" identifier="moneyRightToEvent" modalTransitionStyle="crossDissolve" animates="NO" id="v4P-V1-aKt"/>
                         <segue destination="Ws9-rr-WBd" kind="modal" identifier="moneyRightToMessage" modalTransitionStyle="crossDissolve" animates="NO" id="Dwe-my-26x"/>
                         <segue destination="mY4-e8-F7L" kind="modal" identifier="moneyRightToChill" modalTransitionStyle="crossDissolve" animates="NO" id="Frl-ML-seq"/>
-                        <segue destination="xxr-xt-b08" kind="modal" modalTransitionStyle="crossDissolve" animates="NO" id="yq1-34-ioW"/>
+                        <segue destination="xxr-xt-b08" kind="modal" identifier="moneyRightToSettings" modalTransitionStyle="crossDissolve" animates="NO" id="yq1-34-ioW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bec-Q1-kGm" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -419,10 +420,10 @@
         </simulatedScreenMetrics>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="kiF-ak-YAQ"/>
-        <segue reference="0hn-yA-ph8"/>
-        <segue reference="dpg-gG-k3f"/>
-        <segue reference="7yB-Um-4rb"/>
-        <segue reference="uaf-yc-G4i"/>
+        <segue reference="v4P-V1-aKt"/>
+        <segue reference="LFo-Zw-lAH"/>
+        <segue reference="hEv-rf-2t0"/>
+        <segue reference="Frl-ML-seq"/>
+        <segue reference="Dwe-my-26x"/>
     </inferredMetricsTieBreakers>
 </document>
