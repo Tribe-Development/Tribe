@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		044348DF19804F070040DF5A /* messageBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044348DE19804F070040DF5A /* messageBox.swift */; };
 		046A24D819786B2D00745194 /* vcMessagesLeft.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046A24D719786B2D00745194 /* vcMessagesLeft.swift */; };
 		046A24DA197871B400745194 /* vcMessagesRight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046A24D9197871B400745194 /* vcMessagesRight.swift */; };
 		046A24DC1978768100745194 /* vcEventLeft.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046A24DB1978768100745194 /* vcEventLeft.swift */; };
@@ -41,6 +42,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		044348DE19804F070040DF5A /* messageBox.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = messageBox.swift; sourceTree = "<group>"; };
 		046A24D719786B2D00745194 /* vcMessagesLeft.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = vcMessagesLeft.swift; path = ../vcMessagesLeft.swift; sourceTree = "<group>"; };
 		046A24D9197871B400745194 /* vcMessagesRight.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = vcMessagesRight.swift; path = ../vcMessagesRight.swift; sourceTree = "<group>"; };
 		046A24DB1978768100745194 /* vcEventLeft.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = vcEventLeft.swift; path = ../vcEventLeft.swift; sourceTree = "<group>"; };
@@ -128,6 +130,7 @@
 				047428FB197842E10032C900 /* vcSettings.swift */,
 				046A24E71978839500745194 /* vcSettingsLeft.swift */,
 				04C807E61970697E0019ABDD /* vcMain.swift */,
+				044348DE19804F070040DF5A /* messageBox.swift */,
 			);
 			path = "Tribe-App";
 			sourceTree = "<group>";
@@ -267,6 +270,7 @@
 				046A24EA197883A300745194 /* vcSettingsRight.swift in Sources */,
 				047428F6197842780032C900 /* vcMoney.swift in Sources */,
 				047428FA197842C70032C900 /* vcChill.swift in Sources */,
+				044348DF19804F070040DF5A /* messageBox.swift in Sources */,
 				046A24DC1978768100745194 /* vcEventLeft.swift in Sources */,
 				047428FC197842E10032C900 /* vcSettings.swift in Sources */,
 				046A24D819786B2D00745194 /* vcMessagesLeft.swift in Sources */,
