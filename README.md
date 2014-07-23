@@ -12,15 +12,15 @@ then comment about your changes.
 To create a new branch (before changes):
 
 Get latest code:
-`git checkout master && git pull
+`git checkout master && git pull`
 
 Open new branch:
-`git checkout -b "**username**/my-branch-name"
+`git checkout -b "**username**/my-branch-name"`
 
 When you have made some changes and wish to save progress:
-`git add **files you want to add**
-`git commit -m "meaningful message about changes"
-`git push origin "**username**/my-branch-name"
+`git add **files you want to add**`
+`git commit -m "meaningful message about changes"`
+`git push origin "**username**/my-branch-name"`
 
 When you are sure your code is ready to be merged:
 Go to github.com/Tribe-Development and you will see your branch
