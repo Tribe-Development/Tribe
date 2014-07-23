@@ -261,7 +261,7 @@ class vcMain: UIViewController {
     
     override func viewDidAppear(animated: Bool) {
         //NOTE: Uncomment this line to test login screen
-        //clearUserDefaults()
+        clearUserDefaults()
         var userUsername: AnyObject? = userDefaults.objectForKey("username")
         if(userUsername) {
             performSegueWithIdentifier("loggedIn", sender: self)
