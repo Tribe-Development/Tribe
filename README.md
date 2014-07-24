@@ -4,6 +4,7 @@ Tribe
 The best way to stay in touch with your friends
 
 NOTES:
+
 SWIFT STYLE:
 Please refer to [this](https://github.com/raywenderlich/swift-style-guide#smiley-face "Swift Style") documentation.
 
