@@ -4,6 +4,10 @@ Tribe
 The best way to stay in touch with your friends
 
 NOTES:
+SWIFT STYLE:
+Please refer to [this](https://github.com/raywenderlich/swift-style-guide#smiley-face "Swift Style") documentation.
+
+CONTRIBUTING:
 Please do not push to master, create a branch and push to your branch.
 When you believe your branch is ready to be merged into master, 
 create a pull request with your changes and type @CharlieMartell
