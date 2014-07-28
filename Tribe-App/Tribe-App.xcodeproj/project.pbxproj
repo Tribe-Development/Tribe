@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		041225FE19833307003064CB /* tabBarObj.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041225FD19833307003064CB /* tabBarObj.swift */; };
 		044348DF19804F070040DF5A /* messageBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044348DE19804F070040DF5A /* messageBox.swift */; };
 		046A24D819786B2D00745194 /* vcMessagesLeft.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046A24D719786B2D00745194 /* vcMessagesLeft.swift */; };
 		046A24DA197871B400745194 /* vcMessagesRight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046A24D9197871B400745194 /* vcMessagesRight.swift */; };
@@ -42,6 +43,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		041225FD19833307003064CB /* tabBarObj.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = tabBarObj.swift; sourceTree = "<group>"; };
 		044348DE19804F070040DF5A /* messageBox.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = messageBox.swift; sourceTree = "<group>"; };
 		046A24D719786B2D00745194 /* vcMessagesLeft.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = vcMessagesLeft.swift; path = ../vcMessagesLeft.swift; sourceTree = "<group>"; };
 		046A24D9197871B400745194 /* vcMessagesRight.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = vcMessagesRight.swift; path = ../vcMessagesRight.swift; sourceTree = "<group>"; };
@@ -131,6 +133,7 @@
 				046A24E71978839500745194 /* vcSettingsLeft.swift */,
 				04C807E61970697E0019ABDD /* vcMain.swift */,
 				044348DE19804F070040DF5A /* messageBox.swift */,
+				041225FD19833307003064CB /* tabBarObj.swift */,
 			);
 			path = "Tribe-App";
 			sourceTree = "<group>";
@@ -276,6 +279,7 @@
 				046A24D819786B2D00745194 /* vcMessagesLeft.swift in Sources */,
 				047428F4197842030032C900 /* vcMessages.swift in Sources */,
 				046A24DE1978769000745194 /* vcEventRight.swift in Sources */,
+				041225FE19833307003064CB /* tabBarObj.swift in Sources */,
 				046A24E219787CCF00745194 /* vcMoneyLeft.swift in Sources */,
 				047428F8197842A10032C900 /* vcEvent.swift in Sources */,
 			);

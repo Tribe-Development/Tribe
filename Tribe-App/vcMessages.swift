@@ -113,6 +113,11 @@ class vcMessages: UIViewController {
         }
     }
     
+    func setupTabBar() {
+        let tabBar = tabBarObj()
+        self.view.addSubview(tabBar)
+    }
+    
     override func viewDidLoad() {
         setupSwipeGestures()
         var label = UILabel(frame: CGRectMake(0, 0, 200, 21))
@@ -120,7 +125,8 @@ class vcMessages: UIViewController {
         label.textAlignment = NSTextAlignment.Center
         label.text = "Messages"
         self.view.addSubview(label)
-        setupNavigation()
+        //setupNavigation()
+        setupTabBar()
         // Do any additional setup after loading the view.
     }
     
